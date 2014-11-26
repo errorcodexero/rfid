@@ -57,7 +57,6 @@ string readUID() {//reads UID from read result file
 		}
 	}
 	return UID;
-	cout<<line<<endl;
 }
 
 string inTime(){//Sets the time the people signed in.
@@ -111,11 +110,11 @@ string getName(string RFID_in, bool use_leds = true){//Sets the name of the pers
 			ofstream arduino(">/dev/ttyS2");
 			arduino<<'1';
 			//if (use_leds) system("echo 0 >/dev/ttyS2");
-			if (use_leds) cout<<"Signed Out"<<endl;
+			if (use_leds) cout<<"Signed out "<<name<<" at "<<inTime().substr(16, 5)<<endl;
 		} else {
 			//signing out
 			//if (use_leds) system("echo 1 >/dev/ttyS2");
-			if (use_leds) cout<<"Signed In"<<endl;
+			if (use_leds) cout<<"Signed in "<<name<<" at "<<inTime().substr(16, 5)<<endl;
 		}
 	}
 	return name;
