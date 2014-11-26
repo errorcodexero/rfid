@@ -57,7 +57,6 @@ string readUID() {//reads UID from read result file
 		}
 	}
 	return UID;
-	cout<<line<<endl;
 }
 
 string inTime(){//Sets the time the people signed in.
