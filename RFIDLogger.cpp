@@ -174,6 +174,7 @@ void checkTime() {
 						}
 					}
 					current_time.replace(0, 15, last_time.substr(0, 15));
+					current_time.replace(16, 8, "20:00:00");
 					outputAttendance(name_line, getName(name_line, false), current_time);
 				}
 			}
