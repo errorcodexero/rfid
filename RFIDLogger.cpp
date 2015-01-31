@@ -135,18 +135,18 @@ void outputAttendance(string RFID_in, string name, string sign_in_time){//Output
 }
 
 string auto_append(string last_time){
-	int time=atoi((last_time.substr(0,2)).c_str());
+	int time=atoi((last_time.substr(16,2)).c_str());
 	time+=ESTIMATED_PRESENT_TIME;
-	string sign_out;
-	if(time>10)	sign_out=time;
-	else sign_out="0"+time;
-	sign_out.append(last_time.substr(3, 8));
-	return sign_out;
+	stringstream sign_out;
+	if(time>=10)	sign_out<<time;
+	else sign_out<<"0"<<time;
+	sign_out<<last_time.substr(18,6);
+	return sign_out.str();
 }
 
-void checkTime() {
+void checkTime(bool testing=0) {
 	string time_check = inTime();
-	if ((time_check.substr(16, 2) == "03") && (checked == false)) {
+	if (((time_check.substr(16, 2) == "03") && (checked == false)) || (testing)) {
 		ifstream list_of_names("IdAndNames.txt");
 		while(!list_of_names.eof()) {
 			string name_line;
@@ -201,12 +201,13 @@ int main(){//Input the RFID.
 	result.open("result.txt");
 	result<<"";
 	result.close();	
-	while(1){
+	/*while(1){
 		string name;
 		string sign_in_time;
 		string RFID_in = readUID();
 		if (RFID_in != "") outputAttendance(RFID_in, getName(RFID_in), inTime());
 		checkTime();
-	}
+	}*/
+	checkTime(1);
 	return 0;
 }
