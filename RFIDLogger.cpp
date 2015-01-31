@@ -174,7 +174,7 @@ void checkTime() {
 						}
 					}
 					current_time.replace(0, 15, last_time.substr(0, 15));
-					current_time.replace(16, 8, "20:00:00");
+					current_time.replace(16, 8, last_time+1);//Change last value for automatic signing out
 					outputAttendance(name_line, getName(name_line, false), current_time);
 				}
 			}
