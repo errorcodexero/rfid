@@ -15,6 +15,7 @@
 using namespace std;
 
 bool checked = false;
+const unsigned int ESTIMATED_PRESENT_TIME=1;
 
 //error codes w/ light
 
@@ -86,7 +87,7 @@ string getName(string RFID_in, bool use_leds = true){//Sets the name of the pers
 			if (!input_name.eof()) line.erase((line.size() - 1), 1);
 			name = line.substr((temp_id.size() + 1), (line.size() - (temp_id.size() + 1)));
 			break;
-		} //Meow. Logan was here.
+		}
 	}
 	input_name.close();
 	if (RFID_in == "null") {
@@ -133,9 +134,19 @@ void outputAttendance(string RFID_in, string name, string sign_in_time){//Output
 	}
 }
 
-void checkTime() {
+string auto_append(string last_time){
+	int time=atoi((last_time.substr(16,2)).c_str());
+	time+=ESTIMATED_PRESENT_TIME;
+	stringstream sign_out;
+	if(time>=10)	sign_out<<time;
+	else sign_out<<"0"<<time;
+	sign_out<<last_time.substr(18,6);
+	return sign_out.str();
+}
+
+void checkTime(bool testing=0) {
 	string time_check = inTime();
-	if ((time_check.substr(16, 2) == "03") && (checked == false)) {
+	if (((time_check.substr(16, 2) == "03") && (checked == false)) || (testing)) {
 		ifstream list_of_names("IdAndNames.txt");
 		while(!list_of_names.eof()) {
 			string name_line;
@@ -174,7 +185,7 @@ void checkTime() {
 						}
 					}
 					current_time.replace(0, 15, last_time.substr(0, 15));
-					current_time.replace(16, 8, last_time+1);//Change last value for automatic signing out
+					current_time.replace(16, 8, auto_append(last_time));//Change last value for automatic signing out
 					outputAttendance(name_line, getName(name_line, false), current_time);
 				}
 			}
@@ -190,12 +201,13 @@ int main(){//Input the RFID.
 	result.open("result.txt");
 	result<<"";
 	result.close();	
-	while(1){
+	/*while(1){
 		string name;
 		string sign_in_time;
 		string RFID_in = readUID();
 		if (RFID_in != "") outputAttendance(RFID_in, getName(RFID_in), inTime());
 		checkTime();
-	}
+	}*/
+	checkTime(1);
 	return 0;
 }

@@ -1,5 +1,5 @@
 // • Project: A draft for an RFID input based attendance program. 
-// • Author(s): Matthew Macovsky. FIRST Team #1425 "ERROR CODE XERO".
+// • Author(s): Matthew Macovsky and Logan Traffas. FIRST Team #1425 "ERROR CODE XERO".
 // • Description: A program that will take an input identification from an RFID tag and input it into a log.
 // • WARNING: Is inaccurate after a continuous signed-in period of more than 1 month.
 
