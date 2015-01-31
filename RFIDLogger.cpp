@@ -15,6 +15,7 @@
 using namespace std;
 
 bool checked = false;
+const unsigned int ESTIMATED_PRESENT_TIME=1;
 
 //error codes w/ light
 
@@ -86,7 +87,7 @@ string getName(string RFID_in, bool use_leds = true){//Sets the name of the pers
 			if (!input_name.eof()) line.erase((line.size() - 1), 1);
 			name = line.substr((temp_id.size() + 1), (line.size() - (temp_id.size() + 1)));
 			break;
-		} //Meow. Logan was here.
+		}
 	}
 	input_name.close();
 	if (RFID_in == "null") {
@@ -133,6 +134,16 @@ void outputAttendance(string RFID_in, string name, string sign_in_time){//Output
 	}
 }
 
+string auto_append(string last_time){
+	int time=atoi((last_time.substr(0,2)).c_str());
+	time+=ESTIMATED_PRESENT_TIME;
+	string sign_out;
+	if(time>10)	sign_out=time;
+	else sign_out="0"+time;
+	sign_out.append(last_time.substr(3, 8));
+	return sign_out;
+}
+
 void checkTime() {
 	string time_check = inTime();
 	if ((time_check.substr(16, 2) == "03") && (checked == false)) {
@@ -174,7 +185,7 @@ void checkTime() {
 						}
 					}
 					current_time.replace(0, 15, last_time.substr(0, 15));
-					current_time.replace(16, 8, last_time+1);//Change last value for automatic signing out
+					current_time.replace(16, 8, auto_append(last_time));//Change last value for automatic signing out
 					outputAttendance(name_line, getName(name_line, false), current_time);
 				}
 			}
