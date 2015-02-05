@@ -197,17 +197,13 @@ void checkTime(bool testing=0) {
 }
 
 int main(){//Input the RFID.
-	ofstream result;
-	result.open("result.txt");
-	result<<"";
-	result.close();	
-	/*while(1){
+	while(1){
 		string name;
 		string sign_in_time;
 		string RFID_in = readUID();
 		if (RFID_in != "") outputAttendance(RFID_in, getName(RFID_in), inTime());
 		checkTime();
-	}*/
+	}
 	checkTime(1);
 	return 0;
 }
