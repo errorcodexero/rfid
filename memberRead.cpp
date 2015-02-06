@@ -78,7 +78,7 @@ vector<int> parseTime(string time_string) {//time_string should be in "DAY MON d
 	return numbers;
 }
 
-vector<string> memberRead(string person_name){//Reads out (from the log) the times the person was present.
+vector<string> memberRead(string person_name, bool long_output){//Reads out (from the log) the times the person was present.
 	ifstream logOfTimes("logOfTimes.txt");
 	vector<string> sign_ins;
 	vector<string> sign_outs;
@@ -144,32 +144,38 @@ vector<string> memberRead(string person_name){//Reads out (from the log) the tim
 		}
 		if (sign_outs.size() > 0) {
 			new_output<<"This person has a total attendance time of ";
-			for (int i = 0; i < 6; i++) {
-				if (final_times[i] != 0) {
-					if (new_output.str() != "This person has a total attendance time of ") new_output<<", ";
-					new_output<<final_times[i];				
-					switch (i) {
-						case 0:
-							new_output<<" year";
-							break;
-						case 1:
-							new_output<<" month";
-							break;
-						case 2:
-							new_output<<" day";
-							break;
-						case 3:
-							new_output<<" hour";
-							break;
-						case 4:
-							new_output<<" minute";
-							break;
-						case 5:
-							new_output<<" second";
-							break;
+			if (long_output) {
+				for (int i = 0; i < 6; i++) {
+					if (final_times[i] != 0) {
+						if (new_output.str() != "This person has a total attendance time of ") new_output<<", ";
+						new_output<<final_times[i];				
+						switch (i) {
+							case 0:
+								new_output<<" year";
+								break;
+							case 1:
+								new_output<<" month";
+								break;
+							case 2:
+								new_output<<" day";
+								break;
+							case 3:
+								new_output<<" hour";
+								break;
+							case 4:
+								new_output<<" minute";
+								break;
+							case 5:
+								new_output<<" second";
+								break;
+						}
+						if (final_times[i] > 1) new_output<<"s";
 					}
-					if (final_times[i] > 1) new_output<<"s";
 				}
+			} else {
+				int hours = round((final_times[0]*8544)+(final_times[1]*720)+(final_times[2]*24)+final_times[3]+(final_times[4]*(1/60))+(final_times[5]*(1/360)));
+				new_output<<hours<<" hour";
+				if (hours>1) new_output<<"s";
 			}
 			new_output<<".";
 			output_array.push_back(new_output.str());
@@ -185,7 +191,12 @@ int main(){//Input the RFID.
 		cout<<"Please input a name to view their times logged or \"exit\" to exit: ";
 		string name;
 		getline(cin,name);
-		vector<string> to_print = memberRead(name);
+		bool long_output=0;
+		if (name.substr((name.size()-2), 2)=="-l") {
+			long_output=1;
+			name=name.substr(0, (name.size()-3));
+		}
+		vector<string> to_print = memberRead(name, long_output);
 		if(name=="exit")break;
 		while(to_print.size() != 0) {
 			cout<<to_print[0]<<endl;
