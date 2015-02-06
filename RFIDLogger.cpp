@@ -204,6 +204,5 @@ int main(){//Input the RFID.
 		if (RFID_in != "") outputAttendance(RFID_in, getName(RFID_in), inTime());
 		checkTime();
 	}
-	checkTime(1);
 	return 0;
 }
