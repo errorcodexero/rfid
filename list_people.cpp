@@ -94,7 +94,7 @@ pair<string, int> makeRank(string person_name){//Reads out (from the log) the ti
 				} else {
 					sign_outs.push_back(time);
 					times_out = parseTime(time);
-					times.push_back(place);
+					times.push_back(place);//ERROR HERE
 					for (int i = 0; i < 6; i++) {
 						times[times.size() - 1].push_back(times_out[i] - times_in[i]);
 					}
@@ -158,5 +158,6 @@ int main() {
 	for(unsigned int i = 0; i<outputs.size(); i++) {
 		cout<<i+1<<". "<<outputs[i];
 	}
+	getline(cin, line);
 	return 1;
 }
