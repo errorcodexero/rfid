@@ -1,3 +1,22 @@
+//Mechanical Shop Logins:
+Benjamin Chan=c74772b0=Wed Jan 1 2015 00:00:00
+Ryan Kelly=c06e682b=Wed Jan 1 2015 00:00:00
+Mitchell Nelke=87136cb0=Wed Jan 1 2015 00:00:00
+Maritza Perez=405d352b=Wed Jan 1 2015 00:00:00
+Nick Dunstan=b7d77e7b=Wed Jan 1 2015 00:00:00
+PJ=875378b0=Wed Jan 1 2015 00:00:00
+Anthony Bates=e77e5db0=Wed Jan 1 2015 00:00:00
+Jack Jensen=07d06cb0=Wed Jan 1 2015 00:00:00
+//Totals for Shop:
+Ryan Kelly=c06e682b=Wed Jan 1 2015 30:00:00
+Anthony Bates=e77e5db0=Wed Jan 1 2015 15:00:00
+Nick Dunstan=b7d77e7b=Wed Jan 1 2015 10:00:00
+PJ=875378b0=Wed Jan 1 2015 15:00:00
+Maritza Perez=405d352b=Wed Jan 1 2015 20:00:00
+Mitchell Nelke=87136cb0=Wed Jan 1 2015 20:00:00
+Jack Jensen=07d06cb0=Wed Jan 1 2015 10:00:00
+Benjamin Chan=c74772b0=Wed Jan 1 2015 03:00:00
+//-------------Real Times:
 Adrian Hardt=f08d652b=Sun Jan  4 2015 14:26:52
 Matthew Macovsky=20f02c2b=Sun Jan  4 2015 14:26:52
 Benjamin Chan=c74772b0=Sun Jan  4 2015 14:32:53
@@ -1059,3 +1078,210 @@ Andrew Kassab=20466b2b=Sat Feb  7 2015 15:17:26
 Luke Somerscales=e00d352b=Sat Feb  7 2015 15:17:34
 Beth Hoots=37ef3dda=Sat Feb  7 2015 15:18:05
 Logan Traffas=97e673b0=Sat Feb  7 2015 16:01:49
+Adrian Hardt=f08d652b=Sat Feb  7 2015 16:06:01
+Jacob Brin=80226b2b=Sat Feb  7 2015 16:06:08
+Austin Hohenshelt=47d176b0=Sat Feb  7 2015 16:31:11
+Steve Tarr=b0056a2b=Sat Feb  7 2015 16:40:45
+Ryan Kelly=c06e682b=Sat Feb  7 2015 16:41:00
+Forrest Edwards=50ae542b=Sat Feb  7 2015 16:45:54
+Mitchell Nelke=87136cb0=Sat Feb  7 2015 16:50:00
+Samantha Edwards=273c74b0=Sat Feb  7 2015 16:50:03
+Thomas Woltjer=d72a74b0=Sat Feb  7 2015 16:50:06
+PJ=875378b0=Sat Feb 8 2015  10:02:19
+Eric Rippey=802e682b=Sat Feb 8 2015  10:19:40
+Luke Puppo=87fa70b0=Sat Feb 8 2015  09:54:47
+Maddie Finklea=e0b5981e=Sat Feb 8 2015  02:57:55
+Kjel Pettenger-Willey=10539c1e=Sat Feb 8 2015  09:55:02
+Nick Dunstan=b7d77e7b=Sat Feb 8 2015  01:25:38
+Tim Bennington Davis=b77774b0=Sun Feb  8 2015 15:02:13
+Beth Hoots=37ef3dda=Sun Feb  8 2015 15:11:46
+PJ=875378b0=Sun Feb  8 2015 15:13:42
+Tori Bianchi=6075442b=Sun Feb  8 2015 16:02:15
+PJ=875378b0=Sun Feb  8 2015 16:53:49
+Tim Bennington Davis=b77774b0=Sun Feb  8 2015 16:53:52
+Beth Hoots=37ef3dda=Sun Feb  8 2015 16:55:38
+Tori Bianchi=6075442b=Sun Feb  8 2015 16:58:35
+Tim Bennington Davis=b77774b0=Mon Feb  9 2015 18:38:28
+Andrew Kassab=20466b2b=Mon Feb  9 2015 18:38:47
+Maritza Perez=405d352b=Mon Feb  9 2015 18:38:50
+Austin Hohenshelt=47d176b0=Mon Feb  9 2015 18:38:52
+Austin Hohenshelt=47d176b0=Mon Feb  9 2015 18:38:55
+Logan Traffas=97e673b0=Mon Feb  9 2015 18:38:57
+Austin Hohenshelt=47d176b0=Mon Feb  9 2015 18:39:01
+Andrew King=c7a279b0=Mon Feb  9 2015 18:39:03
+Jacob Brin=80226b2b=Mon Feb  9 2015 18:39:06
+Anna Keil=f0eb2b2b=Mon Feb  9 2015 18:39:17
+Tori Bianchi=6075442b=Mon Feb  9 2015 18:39:19
+Abby Valentine=97a078b0=Mon Feb  9 2015 18:39:21
+Beth Hoots=37ef3dda=Mon Feb  9 2015 18:39:30
+Chris Winjum=20f3302b=Mon Feb  9 2015 18:40:39
+Samantha Edwards=273c74b0=Mon Feb  9 2015 18:40:41
+Eric Rippey=802e682b=Mon Feb  9 2015 18:40:46
+Tom Sommerville=c75a837b=Mon Feb  9 2015 18:46:08
+Adrian Hardt=f08d652b=Mon Feb  9 2015 18:53:53
+Jared Tence=0062672b=Mon Feb  9 2015 18:55:27
+Mitchell Nelke=87136cb0=Mon Feb  9 2015 19:00:23
+Nick Dunstan=b7d77e7b=Mon Feb  9 2015 19:03:09
+Jack Jensen=07d06cb0=Mon Feb  9 2015 19:09:39
+Jared Tence=0062672b=Mon Feb  9 2015 20:20:12
+Forrest Edwards=50ae542b=Mon Feb  9 2015 20:22:26
+Jacob Brin=80226b2b=Mon Feb  9 2015 20:24:45
+Tom Sommerville=c75a837b=Mon Feb  9 2015 20:31:27
+Andrew Kassab=20466b2b=Mon Feb  9 2015 20:40:28
+Andrew King=c7a279b0=Mon Feb  9 2015 20:45:58
+Ryan Kelly=c06e682b=Mon Feb  9 2015 20:50:09
+Mitchell Nelke=87136cb0=Mon Feb  9 2015 20:52:27
+Nick Dunstan=b7d77e7b=Mon Feb  9 2015 20:52:29
+Beth Hoots=37ef3dda=Mon Feb  9 2015 20:57:55
+Abby Valentine=97a078b0=Mon Feb  9 2015 21:02:16
+Tori Bianchi=6075442b=Mon Feb  9 2015 21:02:24
+Anna Keil=f0eb2b2b=Mon Feb  9 2015 21:02:31
+Jack Jensen=07d06cb0=Mon Feb  9 2015 21:02:56
+Chris Winjum=20f3302b=Mon Feb  9 2015 21:04:24
+Austin Hohenshelt=47d176b0=Mon Feb  9 2015 21:11:37
+Forrest Edwards=50ae542b=Mon Feb  9 2015 21:11:56
+Samantha Edwards=273c74b0=Mon Feb  9 2015 21:18:11
+Logan Traffas=97e673b0=Mon Feb  9 2015 21:24:14
+Adrian Hardt=f08d652b=Mon Feb  9 2015 21:24:17
+Eric Rippey=802e682b=Mon Feb  9 2015 21:25:45
+Tim Bennington Davis=b77774b0=Mon Feb  9 2015 21:43:45
+Ryan Kelly=c06e682b=Mon Feb  9 2015 21:43:53
+Maritza Perez=405d352b=Mon Feb  9 2015 21:44:07
+Adrian Hardt=f08d652b=Tue Feb 10 2015 18:34:01
+Eric Rippey=802e682b=Tue Feb 10 2015 18:34:11
+PJ=875378b0=Tue Feb 10 2015 18:34:19
+Ryan Kelly=c06e682b=Tue Feb 10 2015 18:34:19
+Tom Sommerville=c75a837b=Tue Feb 10 2015 18:34:26
+Andrew Kassab=20466b2b=Tue Feb 10 2015 18:34:27
+Logan Traffas=97e673b0=Tue Feb 10 2015 18:34:31
+Anna Keil=f0eb2b2b=Tue Feb 10 2015 18:34:34
+Abby Valentine=97a078b0=Tue Feb 10 2015 18:34:36
+Chris Winjum=20f3302b=Tue Feb 10 2015 18:36:57
+Andrew King=c7a279b0=Tue Feb 10 2015 18:37:11
+Samantha Edwards=273c74b0=Tue Feb 10 2015 18:37:58
+Forrest Edwards=50ae542b=Tue Feb 10 2015 18:43:01
+Jared Tence=0062672b=Tue Feb 10 2015 18:43:52
+Austin Hohenshelt=47d176b0=Tue Feb 10 2015 18:44:32
+Tristan Briggler=d7d16bb0=Tue Feb 10 2015 18:52:18
+Luke Somerscales=e00d352b=Tue Feb 10 2015 19:00:10
+Maritza Perez=405d352b=Tue Feb 10 2015 19:00:21
+Tim Bennington Davis=b77774b0=Tue Feb 10 2015 19:33:41
+Andrew Kassab=20466b2b=Tue Feb 10 2015 19:56:04
+Luke Somerscales=e00d352b=Tue Feb 10 2015 20:17:10
+Anna Keil=f0eb2b2b=Tue Feb 10 2015 20:26:57
+Abby Valentine=97a078b0=Tue Feb 10 2015 20:27:07
+PJ=875378b0=Tue Feb 10 2015 20:27:08
+Beth Hoots=37ef3dda=Tue Feb 10 2015 20:29:39
+Beth Hoots=37ef3dda=Tue Feb 10 2015 20:29:42
+Andrew King=c7a279b0=Tue Feb 10 2015 20:41:26
+Tristan Briggler=d7d16bb0=Tue Feb 10 2015 20:59:09
+Tom Sommerville=c75a837b=Tue Feb 10 2015 21:05:29
+Adrian Hardt=f08d652b=Tue Feb 10 2015 21:06:46
+Logan Traffas=97e673b0=Tue Feb 10 2015 21:06:49
+Chris Winjum=20f3302b=Tue Feb 10 2015 21:08:42
+Austin Hohenshelt=47d176b0=Tue Feb 10 2015 21:16:19
+Forrest Edwards=50ae542b=Tue Feb 10 2015 21:28:08
+Tim Bennington Davis=b77774b0=Tue Feb 10 2015 21:38:51
+Maritza Perez=405d352b=Tue Feb 10 2015 21:49:37
+Samantha Edwards=273c74b0=Tue Feb 10 2015 21:55:32
+Eric Rippey=802e682b=Tue Feb 10 2015 22:13:59
+Jeff Lewis=a0db542b=Tue Feb 10 2015 22:14:49
+Ryan Kelly=c06e682b=Tue Feb 10 2015 22:14:53
+Jeff Lewis=a0db542b=Tue Feb 11 2015 23:14:49
+Jared Tence=0062672b=Tue Feb 11 2015 19:43:52
+Samantha Edwards=273c74b0=Wed Feb 11 2015 18:15:53
+Logan Traffas=97e673b0=Wed Feb 11 2015 18:26:56
+Adrian Hardt=f08d652b=Wed Feb 11 2015 18:27:15
+Eric Rippey=802e682b=Wed Feb 11 2015 18:27:35
+Forrest Edwards=50ae542b=Wed Feb 11 2015 18:28:40
+Maritza Perez=405d352b=Wed Feb 11 2015 18:32:00
+Anna Keil=f0eb2b2b=Wed Feb 11 2015 18:32:21
+Austin Hohenshelt=47d176b0=Wed Feb 11 2015 18:33:26
+Tristan Briggler=d7d16bb0=Wed Feb 11 2015 18:33:32
+Tom Sommerville=c75a837b=Wed Feb 11 2015 18:41:57
+Beth Hoots=37ef3dda=Wed Feb 11 2015 18:42:17
+Larry Sheeley=f73679b0=Wed Feb 11 2015 18:49:06
+Thomas Woltjer=d72a74b0=Wed Feb 11 2015 19:15:59
+Beth Hoots=37ef3dda=Wed Feb 11 2015 20:34:32
+Thomas Woltjer=d72a74b0=Wed Feb 11 2015 20:48:04
+Anna Keil=f0eb2b2b=Wed Feb 11 2015 20:48:27
+PJ=875378b0=Wed Feb 11 2015 17:48:36
+PJ=875378b0=Wed Feb 11 2015 20:49:46
+Tori Bianchi=6075442b=Wed Feb 11 2015 17:50:26
+Tori Bianchi=6075442b=Wed Feb 11 2015 20:50:26Tom Sommerville=c75a837b=Wed Feb 11 2015 20:53:30
+Adrian Hardt=f08d652b=Wed Feb 11 2015 21:01:15
+Logan Traffas=97e673b0=Wed Feb 11 2015 21:01:18
+Eric Rippey=802e682b=Wed Feb 11 2015 21:01:51
+Tristan Briggler=d7d16bb0=Wed Feb 11 2015 21:14:26
+Austin Hohenshelt=47d176b0=Wed Feb 11 2015 21:25:18
+Maritza Perez=405d352b=Wed Feb 11 2015 21:37:56
+Samantha Edwards=273c74b0=Wed Feb 11 2015 21:38:01
+Forrest Edwards=50ae542b=Wed Feb 11 2015 21:38:44
+Larry Sheeley=f73679b0=Wed Feb 12 2015 19:49:06
+Adrian Hardt=f08d652b=Thu Feb 12 2015 18:32:10
+PJ=875378b0=Thu Feb 12 2015 18:32:13
+Maritza Perez=405d352b=Thu Feb 12 2015 18:32:27
+Tori Bianchi=6075442b=Thu Feb 12 2015 18:32:31
+Andrew Kassab=20466b2b=Thu Feb 12 2015 18:32:34
+Logan Traffas=97e673b0=Thu Feb 12 2015 18:32:43
+Maddie Finklea=e0b5981e=Thu Feb 12 2015 18:32:47
+Austin Hohenshelt=47d176b0=Thu Feb 12 2015 18:34:32
+Jacob Tiederman=d0e06d2b=Thu Feb 12 2015 18:34:37
+Samantha Edwards=273c74b0=Thu Feb 12 2015 18:36:31
+Anna Keil=f0eb2b2b=Thu Feb 12 2015 18:38:46
+Eric Rippey=802e682b=Thu Feb 12 2015 18:38:51
+Tristan Briggler=d7d16bb0=Thu Feb 12 2015 18:39:54
+Mitchell Nelke=87136cb0=Thu Feb 12 2015 18:44:17
+Abby Valentine=97a078b0=Thu Feb 12 2015 19:06:32
+Tim Bennington Davis=b77774b0=Thu Feb 12 2015 19:14:00
+Forrest Edwards=50ae542b=Thu Feb 12 2015 19:28:31
+Anna Keil=f0eb2b2b=Thu Feb 12 2015 20:37:14
+PJ=875378b0=Thu Feb 12 2015 20:38:04
+Tori Bianchi=6075442b=Thu Feb 12 2015 20:38:15
+Tristan Briggler=d7d16bb0=Thu Feb 12 2015 20:38:30
+Abby Valentine=97a078b0=Thu Feb 12 2015 20:39:38
+Logan Traffas=97e673b0=Thu Feb 12 2015 20:48:49
+Adrian Hardt=f08d652b=Thu Feb 12 2015 20:51:28
+Jacob Tiederman=d0e06d2b=Thu Feb 12 2015 20:54:44
+Maddie Finklea=e0b5981e=Thu Feb 12 2015 21:02:12
+Austin Hohenshelt=47d176b0=Thu Feb 12 2015 21:07:54
+Mitchell Nelke=87136cb0=Thu Feb 12 2015 21:46:10
+Samantha Edwards=273c74b0=Thu Feb 12 2015 21:46:17
+Maritza Perez=405d352b=Thu Feb 12 2015 21:46:22
+Forrest Edwards=50ae542b=Thu Feb 12 2015 21:46:30
+Tim Bennington Davis=b77774b0=Thu Feb 12 2015 22:14:49
+Andrew Kassab=20466b2b=Thu Feb 12 2015 22:15:00
+Eric Rippey=802e682b=Thu Feb 12 2015 22:18:08
+Eric Rippey=802e682b=Fri Feb 13 2015 18:20:20
+Maritza Perez=405d352b=Fri Feb 13 2015 18:20:22
+Zach Sloper=77b875b0=Fri Feb 13 2015 18:24:47
+Austin Hohenshelt=47d176b0=Fri Feb 13 2015 18:27:42
+Ryan Kelly=c06e682b=Fri Feb 13 2015 18:27:59
+Andrew Kassab=20466b2b=Fri Feb 13 2015 18:30:49
+Anna Keil=f0eb2b2b=Fri Feb 13 2015 18:31:48
+Adrian Hardt=f08d652b=Fri Feb 13 2015 18:32:02
+Logan Traffas=97e673b0=Fri Feb 13 2015 18:32:17
+Samantha Edwards=273c74b0=Fri Feb 13 2015 18:32:29
+Anthony Bates=e77e5db0=Fri Feb 13 2015 18:35:00
+Mitchell Nelke=87136cb0=Fri Feb 13 2015 18:45:10
+Anna Keil=f0eb2b2b=Fri Feb 13 2015 18:46:29
+Tim Bennington Davis=b77774b0=Fri Feb 13 2015 18:51:08
+Forrest Edwards=50ae542b=Fri Feb 13 2015 19:54:06
+Thomas Woltjer=d72a74b0=Fri Feb 13 2015 20:15:09
+Anthony Bates=e77e5db0=Fri Feb 13 2015 20:36:28
+Thomas Woltjer=d72a74b0=Fri Feb 13 2015 20:42:17
+Zach Sloper=77b875b0=Fri Feb 13 2015 20:51:23
+Ryan Kelly=c06e682b=Fri Feb 13 2015 20:51:28
+Austin Hohenshelt=47d176b0=Fri Feb 13 2015 21:02:05
+Mitchell Nelke=87136cb0=Fri Feb 13 2015 21:04:09
+Maritza Perez=405d352b=Fri Feb 13 2015 21:04:29
+Samantha Edwards=273c74b0=Fri Feb 13 2015 21:04:43
+Andrew Kassab=20466b2b=Fri Feb 13 2015 21:04:50
+Eric Rippey=802e682b=Fri Feb 13 2015 21:15:01
+Adrian Hardt=f08d652b=Fri Feb 13 2015 21:17:36
+Logan Traffas=97e673b0=Fri Feb 13 2015 21:17:46
+Forrest Edwards=50ae542b=Fri Feb 14 2015 20:54:06
+Tim Bennington Davis=b77774b0=Fri Feb 14 2015 19:51:08
+Austin Hohenshelt=47d176b0=Sat Feb 14 2015 09:17:48
+Andrew King=c7a279b0=Sat Feb 14 2015 09:17:53
+Logan Traffas=97e673b0=Sat Feb 14 2015 09:20:14
