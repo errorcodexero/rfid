@@ -196,6 +196,28 @@ void checkTime(bool testing=0) {
 	}
 }
 
+string get_id(string name){
+	string ID;
+	string time_check = inTime();
+	ifstream list_of_names("IdAndNames.txt");
+	while(!list_of_names.eof()) {
+		string name_line;
+		getline(list_of_names, name_line);
+		if (name_line != "-") {
+			size_t name_point = name_line.find("=");
+			string new_name_line = name_line.substr(name_point+1, name_line.length()-name_point-2);
+			if(name==new_name_line){
+				ID=name_line.substr(0, name_point);
+				list_of_names.close();
+				return ID;
+			}
+		}
+	}
+	list_of_names.close();
+	//assert(0);
+	return "ERROR";
+}
+
 bool check_name(string name){
 	string time_check = inTime();
 	ifstream list_of_names("IdAndNames.txt");
@@ -217,16 +239,16 @@ bool check_name(string name){
 
 int main(){//Input the RFID.
 	while(1){
+		
 		cout<<"Enter your name to sign in or out: ";
 		string name;
 		getline(cin, name);
-		if(!check_name("Logan Traffas")){
-			cout<<endl<<"Error. There is no association with the name \""<<name<<"\". Please try again."<<endl;
-		}
+		if(!check_name("Logan Traffas")) cout<<endl<<"Error. There is no association with the name \""<<name<<"\". Please try again."<<endl;
 		else{
 			string sign_in_time;
 			string RFID_in = readUID();
-			if (RFID_in != "") outputAttendance(RFID_in, getName(RFID_in), inTime());
+			outputAttendance(get_id(name), name, inTime());
+			cout<<"Logged "<<name<<" at "<<inTime().substr(16, 5)<<endl;
 			checkTime();
 		}
 	}
