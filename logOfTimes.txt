@@ -1560,3 +1560,11 @@ Steve Tarr=b0056a2b=Mon Feb 23 2015 18:33:24
 Benjamin Chan=c74772b0=Mon Feb 23 2015 18:36:10
 Jack Jensen=07d06cb0=Mon Feb 23 2015 18:36:14
 Anna Keil=f0eb2b2b=Mon Feb 23 2015 18:37:11
+Jared Tence=0062672b=Mon Feb 23 2015 19:09:51
+Forrest Edwards=50ae542b=Mon Feb 23 2015 19:17:55
+Jacob Tiederman=d0e06d2b=Mon Feb 23 2015 19:32:16
+Steve Tarr=b0056a2b=Mon Feb 23 2015 20:41:09
+Zach Sloper=77b875b0=Mon Feb 23 2015 20:57:57
+Benjamin Chan=c74772b0=Mon Feb 23 2015 21:02:53
+Jack Jensen=07d06cb0=Mon Feb 23 2015 21:07:17
+Matthew Macovsky=20f02c2b=Mon Feb 23 2015 21:19:59
