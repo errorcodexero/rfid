@@ -243,7 +243,7 @@ int main(){//Input the RFID.
 		cout<<"Enter your name to sign in or out: ";
 		string name;
 		getline(cin, name);
-		if(!check_name("Logan Traffas")) cout<<endl<<"Error. There is no association with the name \""<<name<<"\". Please try again."<<endl;
+		if(!check_name(name)) cout<<"Error. There is no association with the name \""<<name<<"\". Please try again."<<endl;
 		else{
 			string sign_in_time;
 			string RFID_in = readUID();
