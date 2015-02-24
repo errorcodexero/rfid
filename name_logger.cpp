@@ -196,13 +196,39 @@ void checkTime(bool testing=0) {
 	}
 }
 
+bool check_name(string name){
+	string time_check = inTime();
+	ifstream list_of_names("IdAndNames.txt");
+	while(!list_of_names.eof()) {
+		string name_line;
+		getline(list_of_names, name_line);
+		if (name_line != "-") {
+			size_t name_point = name_line.find("=");
+			name_line = name_line.substr(name_point+1, name_line.length()-name_point-2);
+			if(name==name_line){
+				list_of_names.close();
+				return 1;
+			}
+		}
+	}
+	list_of_names.close();
+	return 0;
+}
+
 int main(){//Input the RFID.
 	while(1){
+		cout<<"Enter your name to sign in or out: ";
 		string name;
-		string sign_in_time;
-		string RFID_in = readUID();
-		if (RFID_in != "") outputAttendance(RFID_in, getName(RFID_in), inTime());
-		checkTime();
+		getline(cin, name);
+		if(!check_name("Logan Traffas")){
+			cout<<endl<<"Error. There is no association with the name \""<<name<<"\". Please try again."<<endl;
+		}
+		else{
+			string sign_in_time;
+			string RFID_in = readUID();
+			if (RFID_in != "") outputAttendance(RFID_in, getName(RFID_in), inTime());
+			checkTime();
+		}
 	}
 	return 0;
 }
