@@ -168,7 +168,7 @@ Nick Dunstan=b7d77e7b=Mon Jan 5 2015 21:00:00
 Larry Sheeley=f73679b0=Tue Jan  6 2015 17:42:12
 Andrew King=c7a279b0=Tue Jan  6 2015 18:19:36
 Tori Bianchi=6075442b=Tue Jan  6 2015 18:20:42
-Jacob Tiederman=d0e06d2b=Tue Jan  6 2015 18:23:57
+Jacob Tiderman=d0e06d2b=Tue Jan  6 2015 18:23:57
 Steve Tarr=b0056a2b=Tue Jan  6 2015 18:24:17
 Anna Keil=f0eb2b2b=Tue Jan  6 2015 18:26:15
 Anthony Bates=e77e5db0=Tue Jan  6 2015 18:26:38
@@ -194,7 +194,7 @@ Anna Keil=f0eb2b2b=Tue Jan  6 2015 21:02:47
 Tristan Briggler=d7d16bb0=Tue Jan  6 2015 21:03:17
 Steve Tarr=b0056a2b=Tue Jan  6 2015 21:07:56
 Benjamin Chan=c74772b0=Tue Jan  6 2015 21:10:11
-Jacob Tiederman=d0e06d2b=Tue Jan  6 2015 21:10:46
+Jacob Tiderman=d0e06d2b=Tue Jan  6 2015 21:10:46
 Eric Rippey=802e682b=Tue Jan  6 2015 21:11:05
 Austin Hohenshelt=47d176b0=Tue Jan  6 2015 21:12:32
 Forrest Edwards=50ae542b=Tue Jan 6 2015 20:00:00
@@ -444,14 +444,14 @@ Forrest Edwards=50ae542b=Sat Jan 17 2015 09:50:47
 Logan Traffas=97e673b0=Sat Jan 17 2015 10:03:09
 Adrian Hardt=f08d652b=Sat Jan 17 2015 10:03:13
 Anna Keil=f0eb2b2b=Sat Jan 17 2015 10:04:58
-Jacob Tiederman=d0e06d2b=Sat Jan 17 2015 10:13:01
+Jacob Tiderman=d0e06d2b=Sat Jan 17 2015 10:13:01
 Larry Sheeley=f73679b0=Sat Jan 17 2015 10:31:15
 Matthew Macovsky=20f02c2b=Sat Jan 17 2015 11:00:15
 Andrew Kassab=20466b2b=Sat Jan 17 2015 12:17:48
 Jared Tence=0062672b=Sat Jan 17 2015 12:30:16
 Benjamin Chan=c74772b0=Sat Jan 17 2015 12:50:30
 Austin Hohenshelt=47d176b0=Sat Jan 17 2015 13:30:39
-Jacob Tiederman=d0e06d2b=Sat Jan 17 2015 13:58:13
+Jacob Tiderman=d0e06d2b=Sat Jan 17 2015 13:58:13
 Tristan Briggler=d7d16bb0=Sat Jan 17 2015 14:28:23
 Abby Valentine=97a078b0=Sat Jan 17 2015 14:38:15
 PJ=875378b0=Sat Jan 17 2015 14:38:23
@@ -485,13 +485,13 @@ Ryan Kelly=c06e682b=Sun Jan 18 2015 14:03:03
 Anthony Bates=e77e5db0=Sun Jan 18 2015 14:03:08
 Samantha Edwards=273c74b0=Sun Jan 18 2015 14:08:24
 Maritza Perez=405d352b=Sun Jan 18 2015 14:13:17
-Jacob Tiederman=d0e06d2b=Sun Jan 18 2015 14:18:51
+Jacob Tiderman=d0e06d2b=Sun Jan 18 2015 14:18:51
 Anthony Bates=e77e5db0=Sun Jan 18 2015 16:27:27
 Tristan Briggler=d7d16bb0=Sun Jan 18 2015 17:35:04
 Austin Hohenshelt=47d176b0=Sun Jan 18 2015 17:59:48
 Maritza Perez=405d352b=Sun Jan 18 2015 18:07:09
 Ryan Kelly=c06e682b=Sun Jan 18 2015 18:46:55
-Jacob Tiederman=d0e06d2b=Sun Jan 18 2015 18:47:26
+Jacob Tiderman=d0e06d2b=Sun Jan 18 2015 18:47:26
 Samantha Edwards=273c74b0=Sun Jan 18 2015 18:53:35
 Forrest Edwards=50ae542b=Sun Jan 18 2015 18:53:48
 Jeff Lewis=a0db542b=Sun Jan 18 2015 18:53:54
@@ -842,7 +842,7 @@ Steve Tarr=b0056a2b=Sat Jan 31 2015 09:58:05
 Logan Traffas=97e673b0=Sat Jan 31 2015 09:58:42
 Beth Hoots=37ef3dda=Sat Jan 31 2015 10:18:30
 Thomas Woltjer=d72a74b0=Sat Jan 31 2015 10:25:52
-Jacob Tiederman=d0e06d2b=Sat Jan 31 2015 10:26:18
+Jacob Tiderman=d0e06d2b=Sat Jan 31 2015 10:26:18
 Tristan Briggler=d7d16bb0=Sat Jan 31 2015 10:31:52
 Anna Keil=f0eb2b2b=Sat Jan 31 2015 10:43:52
 Tim Bennington Davis=b77774b0=Sat Jan 31 2015 10:43:59
@@ -866,7 +866,7 @@ Maddie Finklea=e0b5981e=Sat Jan 31 2015 13:03:32
 Austin Hohenshelt=47d176b0=Sat Jan 31 2015 13:11:13
 Samantha Edwards=273c74b0=Sat Jan 31 2015 13:16:15
 Forrest Edwards=50ae542b=Sat Jan 31 2015 13:16:18
-Jacob Tiederman=d0e06d2b=Sat Jan 31 2015 13:27:26
+Jacob Tiderman=d0e06d2b=Sat Jan 31 2015 13:27:26
 Anthony Bates=e77e5db0=Sat Jan 31 2015 13:33:49
 Adrian Hardt=f08d652b=Sat Jan 31 2015 14:25:41
 Andrew Kassab=20466b2b=Sat Jan 31 2015 15:22:52
@@ -1268,7 +1268,7 @@ Andrew Kassab=20466b2b=Thu Feb 12 2015 18:32:34
 Logan Traffas=97e673b0=Thu Feb 12 2015 18:32:43
 Maddie Finklea=e0b5981e=Thu Feb 12 2015 18:32:47
 Austin Hohenshelt=47d176b0=Thu Feb 12 2015 18:34:32
-Jacob Tiederman=d0e06d2b=Thu Feb 12 2015 18:34:37
+Jacob Tiderman=d0e06d2b=Thu Feb 12 2015 18:34:37
 Samantha Edwards=273c74b0=Thu Feb 12 2015 18:36:31
 Anna Keil=f0eb2b2b=Thu Feb 12 2015 18:38:46
 Eric Rippey=802e682b=Thu Feb 12 2015 18:38:51
@@ -1284,7 +1284,7 @@ Tristan Briggler=d7d16bb0=Thu Feb 12 2015 20:38:30
 Abby Valentine=97a078b0=Thu Feb 12 2015 20:39:38
 Logan Traffas=97e673b0=Thu Feb 12 2015 20:48:49
 Adrian Hardt=f08d652b=Thu Feb 12 2015 20:51:28
-Jacob Tiederman=d0e06d2b=Thu Feb 12 2015 20:54:44
+Jacob Tiderman=d0e06d2b=Thu Feb 12 2015 20:54:44
 Maddie Finklea=e0b5981e=Thu Feb 12 2015 21:02:12
 Austin Hohenshelt=47d176b0=Thu Feb 12 2015 21:07:54
 Mitchell Nelke=87136cb0=Thu Feb 12 2015 21:46:10
@@ -1432,7 +1432,7 @@ Luke Puppo=87fa70b0=Tue Feb 17 2015 18:35:33
 Kjel Pettenger-Willey=10539c1e=Tue Feb 17 2015 18:35:43
 Austin Hohenshelt=47d176b0=Tue Feb 17 2015 18:37:01
 Jack Jensen=07d06cb0=Tue Feb 17 2015 18:39:49
-Jacob Tiederman=d0e06d2b=Tue Feb 17 2015 18:41:41
+Jacob Tiderman=d0e06d2b=Tue Feb 17 2015 18:41:41
 PJ=875378b0=Tue Feb 17 2015 18:43:17
 Nick Dunstan=b7d77e7b=Tue Feb 17 2015 18:54:49
 Steve Tarr=b0056a2b=Tue Feb 17 2015 18:58:10
@@ -1468,7 +1468,7 @@ Andrew Kassab=20466b2b=Tue Feb 17 2015 20:30:49
 Luke Puppo=87fa70b0=Tue Feb 17 2015 19:35:33
 Samantha Edwards=273c74b0=Tue Feb 17 2015 19:24:12
 Kjel Pettenger-Willey=10539c1e=Tue Feb 17 2015 19:35:43
-Jacob Tiederman=d0e06d2b=Tue Feb 17 2015 19:41:41
+Jacob Tiderman=d0e06d2b=Tue Feb 17 2015 19:41:41
 Maritza Perez=405d352b=Tue Feb 17 2015 19:23:31
 Ryan Kelly=c06e682b=Tue Feb 17 2015 19:22:00
 Andrew Kassab=20466b2b=Thu Feb 19 2015 18:30:46
@@ -1485,12 +1485,12 @@ Abby Valentine=97a078b0=Thu Feb 19 2015 20:14:42
 Anna Keil=f0eb2b2b=Thu Feb 19 2015 20:15:29
 Tristan Briggler=d7d16bb0=Thu Feb 19 2015 20:16:28
 Tori Bianchi=6075442b=Thu Feb 19 2015 20:17:08
-Jacob Tiederman=d0e06d2b=Thu Feb 19 2015 20:28:20
+Jacob Tiderman=d0e06d2b=Thu Feb 19 2015 20:28:20
 Austin Hohenshelt=47d176b0=Thu Feb 19 2015 21:00:15
 Jack Jensen=07d06cb0=Thu Feb 19 2015 21:06:36
 Andrew Kassab=20466b2b=Thu Feb 19 2015 21:12:42
 Logan Traffas=97e673b0=Thu Feb 19 2015 21:12:44
-Jacob Tiederman=d0e06d2b=Thu Feb 19 2015 21:18:45
+Jacob Tiderman=d0e06d2b=Thu Feb 19 2015 21:18:45
 Samantha Edwards=273c74b0=Thu Feb 19 2015 21:19:47
 Forrest Edwards=50ae542b=Thu Feb 19 2015 19:46:19
 Andrew King=c7a279b0=Sat Feb 21 2015 09:05:46
@@ -1505,7 +1505,7 @@ Adrian Hardt=f08d652b=Sat Feb 21 2015 09:51:22
 Logan Traffas=97e673b0=Sat Feb 21 2015 10:01:39
 Matthew Macovsky=20f02c2b=Sat Feb 21 2015 10:10:37
 Tori Bianchi=6075442b=Sat Feb 21 2015 10:06:27
-Jacob Tiederman=d0e06d2b=Sat Feb 21 2015 10:06:05
+Jacob Tiderman=d0e06d2b=Sat Feb 21 2015 10:06:05
 Forrest Edwards=50ae542b=Sat Feb 21 2015 10:12:38
 Benjamin Chan=c74772b0=Sat Feb 21 2015 10:34:31
 Thomas Woltjer=d72a74b0=Sat Feb 21 2015 10:47:19
@@ -1528,7 +1528,7 @@ Maddie Finklea=e0b5981e=Sat Feb 21 2015 13:14:47
 Anthony Bates=e77e5db0=Sat Feb 21 2015 14:01:01
 Anna Keil=f0eb2b2b=Sat Feb 21 2015 14:09:13
 Mitchell Nelke=87136cb0=Sat Feb 21 2015 14:24:52
-Jacob Tiederman=d0e06d2b=Sat Feb 21 2015 14:38:12
+Jacob Tiderman=d0e06d2b=Sat Feb 21 2015 14:38:12
 Thomas Woltjer=d72a74b0=Sat Feb 21 2015 15:01:41
 Zach Sloper=77b875b0=Sat Feb 21 2015 15:01:44
 Adrian Hardt=f08d652b=Sat Feb 21 2015 15:02:58
@@ -1563,7 +1563,7 @@ Anna Keil=f0eb2b2b=Mon Feb 23 2015 18:37:11
 Matthew Macovsky=20f02c2b=Mon Feb 23 2015 18:39:59
 Jared Tence=0062672b=Mon Feb 23 2015 19:09:51
 Forrest Edwards=50ae542b=Mon Feb 23 2015 19:17:55
-Jacob Tiederman=d0e06d2b=Mon Feb 23 2015 19:32:16
+Jacob Tiderman=d0e06d2b=Mon Feb 23 2015 19:32:16
 Steve Tarr=b0056a2b=Mon Feb 23 2015 20:41:09
 Zach Sloper=77b875b0=Mon Feb 23 2015 20:57:57
 Benjamin Chan=c74772b0=Mon Feb 23 2015 21:02:53
@@ -1577,7 +1577,7 @@ Eric Rippey=802e682b=Mon Feb 23 2015 21:30:00
 Austin Hohenshelt=47d176b0=Mon Feb 23 2015 21:30:00
 Jared Tence=0062672b=Mon Feb 23 2015 21:30:00
 Forrest Edwards=50ae542b=Mon Feb 23 2015 21:30:00
-Jacob Tiederman=d0e06d2b=Mon Feb 23 2015 21:30:00
+Jacob Tiderman=d0e06d2b=Mon Feb 23 2015 21:30:00
 Logan Traffas=97e673b0=Tue Feb 24 2015 18:30:41
 Austin Hohenshelt=47d176b0=Tue Feb 24 2015 18:31:06
 Andrew King=c7a279b0=Tue Feb 24 2015 18:31:30
@@ -1588,3 +1588,11 @@ Jack Jensen=07d06cb0=Tue Feb 24 2015 18:37:58
 Luke Somerscales=e00d352b=Tue Feb 24 2015 18:38:16
 Tristan Briggler=d7d16bb0=Tue Feb 24 2015 18:38:51
 Ryan Kelly=c06e682b=Tue Feb 24 2015 18:39:05
+Jared Tence=0062672b=Tue Feb 24 2015 18:51:36
+Mitchell Nelke=87136cb0=Tue Feb 24 2015 18:52:45
+Jared Tence=0062672b=Tue Feb 24 2015 18:59:32
+Jack Jensen=07d06cb0=Tue Feb 24 2015 18:59:50
+Jack Jensen=07d06cb0=Tue Feb 24 2015 18:59:56
+Ethan Yochim=b78079b0=Tue Feb 24 2015 19:00:08
+Jared Tence=0062672b=Tue Feb 24 2015 19:00:17
+Jacob Tiderman=d0e06d2b=Tue Feb 24 2015 19:21:03
