@@ -197,6 +197,7 @@ void checkTime(bool testing=0) {
 }
 
 int main(){//Input the RFID.
+	cout<<"Attendance code running."<<endl;
 	while(1){
 		string name;
 		string sign_in_time;
