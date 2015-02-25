@@ -229,11 +229,11 @@ string sign_in_or_out(string name, bool use_leds=1){
 			ofstream arduino(">/dev/ttyS2");
 			arduino<<'1';
 			//if (use_leds) system("echo 0 >/dev/ttyS2");
-			if (use_leds) in_or_out="Signed out";
+			if (use_leds) in_or_out="Signed in";
 		} else {
 			//signing out
 			//if (use_leds) system("echo 1 >/dev/ttyS2");
-			if (use_leds) in_or_out="Signed in";
+			if (use_leds) in_or_out="Signed out";
 		}
 	return in_or_out;
 }

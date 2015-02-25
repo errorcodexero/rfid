@@ -1568,3 +1568,17 @@ Zach Sloper=77b875b0=Mon Feb 23 2015 20:57:57
 Benjamin Chan=c74772b0=Mon Feb 23 2015 21:02:53
 Jack Jensen=07d06cb0=Mon Feb 23 2015 21:07:17
 Matthew Macovsky=20f02c2b=Mon Feb 23 2015 21:19:59
+Logan Traffas=97e673b0=Mon Feb 23 2015 21:30:41
+Andrew Kassab=20466b2b=Mon Feb 23 2015 21:30:41
+Ryan Kelly=c06e682b=Mon Feb 23 2015 21:30:41
+Maritza Perez=405d352b=Mon Feb 23 2015 21:30:41
+Eric Rippey=802e682b=Mon Feb 23 2015 21:30:00
+Austin Hohenshelt=47d176b0=Mon Feb 23 2015 21:30:00
+Jared Tence=0062672b=Mon Feb 23 2015 21:30:00
+Forrest Edwards=50ae542b=Mon Feb 23 2015 21:30:00
+Jacob Tiederman=d0e06d2b=Mon Feb 23 2015 21:30:00
+Logan Traffas=97e673b0=Tue Feb 24 2015 18:30:41
+Austin Hohenshelt=47d176b0=Tue Feb 24 2015 18:31:06
+Andrew King=c7a279b0=Tue Feb 24 2015 18:31:30
+Andrew Kassab=20466b2b=Tue Feb 24 2015 18:33:24
+Adrian Hardt=f08d652b=Tue Feb 24 2015 18:35:10
