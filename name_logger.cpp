@@ -43,22 +43,6 @@ vector<vector<string> > checkSigns(string RFID_code) {
 	return out_vector;
 }
 
-string readUID() {//reads UID from read result file
-	string line;
-	string UID;
-	ifstream result("result.txt");
-	getline(result, line);
-	getline(result, line);
-	if (line != "") {
-		size_t found = line.find("\"", 8);
-		if (found != std::string::npos) {
-			UID = line.substr(8, (found - 8));
-		} else {
-			UID = "null";
-		}
-	}
-	return UID;
-}
 
 string inTime(){//Sets the time the people signed in.
 	string sign_in_time;
@@ -237,18 +221,32 @@ bool check_name(string name){
 	return 0;
 }
 
+string sign_in_or_out(string name, bool use_leds=1){
+	string in_or_out;
+	vector<vector<string>> signs = checkSigns(get_id(name));
+		if (signs[0].size() != signs[1].size()) {
+			//signing in
+			ofstream arduino(">/dev/ttyS2");
+			arduino<<'1';
+			//if (use_leds) system("echo 0 >/dev/ttyS2");
+			if (use_leds) in_or_out="Signed out";
+		} else {
+			//signing out
+			//if (use_leds) system("echo 1 >/dev/ttyS2");
+			if (use_leds) in_or_out="Signed in";
+		}
+	return in_or_out;
+}
+
 int main(){//Input the RFID.
 	while(1){
-		
 		cout<<"Enter your name to sign in or out: ";
 		string name;
 		getline(cin, name);
 		if(!check_name(name)) cout<<"Error. There is no association with the name \""<<name<<"\". Please try again."<<endl;
 		else{
-			string sign_in_time;
-			string RFID_in = readUID();
 			outputAttendance(get_id(name), name, inTime());
-			cout<<"Logged "<<name<<" at "<<inTime().substr(16, 5)<<endl;
+			cout<<sign_in_or_out(name)<<" "<<name<<" at "<<inTime().substr(16, 5)<<endl;
 			checkTime();
 		}
 	}
