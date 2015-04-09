@@ -40,7 +40,7 @@ Maddie Finklea=e0b5981e=Wed Jan 1 2015 05:00:00
 PJ=875378b0=Wed Jan 1 2015 00:00:00
 Matthew Macovsky=20f02c2b=Wed Jan 1 2015 00:00:00
 JFK=30f02c2b=Wed Jan 1 2015 00:00:00
-JFK=30f02c2b=Wed Jan 1 2015 248:50:34
+JFK=30f02c2b=Wed Jan 1 2015 256:50:34
 Tori Bianchi=6075442b=Wed Jan 1 2015 00:00:00
 Zach Sloper=77b875b0=Wed Jan 1 2015 00:00:00
 Andrew Kassab=20466b2b=Wed Jan 1 2015 00:00:00
@@ -2281,11 +2281,9 @@ Ryan Kelly=c06e682b=Wed Mar 25 2015 20:15:18
 Ryan Kelly=c06e682b=Wed Mar 25 2015 20:15:21
 Matthew Macovsky=20f02c2b=Wed Mar 25 2015 20:16:53
 PJ=875378b0=Wed Mar 25 2015 20:17:01
-PJ=875378b0=Wed Mar 25 2015 20:17:04
 Logan Traffas=97e673b0=Wed Mar 25 2015 20:17:42
 Anthony Bates=e77e5db0=Wed Mar 25 2015 20:18:34
 Jacob Tiderman=d0e06d2b=Wed Mar 25 2015 20:18:44
-PJ=875378b0=Wed Mar 25 2015 20:20:25
 Matthew Macovsky=20f02c2b=Wed Mar 25 2015 20:20:33
 Austin Hohenshelt=47d176b0=Wed Mar 25 2015 20:33:26
 Ryan Kelly=c06e682b=Wed Mar 25 2015 20:34:02
@@ -2296,6 +2294,7 @@ Zach Sloper=77b875b0=Mon Mar 30 2015 18:24:58
 Tristan Briggler=d7d16bb0=Mon Mar 30 2015 18:29:06
 Ryan Kelly=c06e682b=Mon Mar 30 2015 18:30:13
 Logan Traffas=97e673b0=Mon Mar 30 2015 18:31:38
+Matthew Macovsky=20f02c2b=Mon Mar 30 2015 18:32:52
 Andrew Kassab=20466b2b=Mon Mar 30 2015 18:32:49
 Austin Hohenshelt=47d176b0=Mon Mar 30 2015 18:35:08
 Steve Tarr=b0056a2b=Mon Mar 30 2015 18:41:55
@@ -2305,3 +2304,84 @@ Anthony Bates=e77e5db0=Mon Mar 30 2015 18:47:15
 Jacob Tiderman=d0e06d2b=Mon Mar 30 2015 19:06:12
 Beth Hoots=37ef3dda=Mon Mar 30 2015 19:16:32
 Anthony Bates=e77e5db0=Mon Mar 30 2015 19:45:01
+Thomas Woltjer=d72a74b0=Mon Mar 30 2015 19:45:26
+Beth Hoots=37ef3dda=Mon Mar 30 2015 20:34:19
+Anna Keil=f0eb2b2b=Mon Mar 30 2015 20:38:55
+Zach Sloper=77b875b0=Mon Mar 30 2015 20:39:03
+Austin Hohenshelt=47d176b0=Mon Mar 30 2015 20:54:31
+Tori Bianchi=6075442b=Mon Mar 30 2015 20:55:34
+Jacob Tiderman=d0e06d2b=Mon Mar 30 2015 21:14:42
+Andrew Kassab=20466b2b=Mon Mar 30 2015 21:14:54
+Thomas Woltjer=d72a74b0=Mon Mar 30 2015 21:24:25
+Steve Tarr=b0056a2b=Mon Mar 30 2015 21:29:51
+Tristan Briggler=d7d16bb0=Mon Mar 30 2015 21:31:11
+Ryan Kelly=c06e682b=Mon Mar 30 2015 21:37:48
+Logan Traffas=97e673b0=Mon Mar 30 2015 21:42:49
+Matthew Macovsky=20f02c2b=Mon Mar 30 2015 21:42:52
+Logan Traffas=97e673b0=Tue Mar 31 2015 18:31:10
+Andrew King=c7a279b0=Tue Mar 31 2015 18:31:30
+Jack Jensen=07d06cb0=Tue Mar 31 2015 18:32:00
+Jack Jensen=07d06cb0=Tue Mar 31 2015 18:32:05
+Ryan Kelly=c06e682b=Tue Mar 31 2015 18:32:38
+Steve Tarr=b0056a2b=Tue Mar 31 2015 18:38:20
+Andrew Kassab=20466b2b=Tue Mar 31 2015 18:39:01
+PJ=875378b0=Tue Mar 31 2015 18:39:10
+Austin Hohenshelt=47d176b0=Tue Mar 31 2015 18:40:24
+Anna Keil=f0eb2b2b=Tue Mar 31 2015 18:48:18
+Abby Valentine=97a078b0=Tue Mar 31 2015 18:48:23
+Tristan Briggler=d7d16bb0=Tue Mar 31 2015 18:49:43
+Tristan Briggler=d7d16bb0=Tue Mar 31 2015 20:10:43
+Anthony Bates=e77e5db0=Tue Mar 31 2015 18:57:08
+Zach Sloper=77b875b0=Tue Mar 31 2015 19:28:28
+Steve Tarr=b0056a2b=Tue Mar 31 2015 19:51:07
+Anna Keil=f0eb2b2b=Tue Mar 31 2015 20:52:00
+Abby Valentine=97a078b0=Tue Mar 31 2015 20:52:07
+Anthony Bates=e77e5db0=Tue Mar 31 2015 20:52:22
+Zach Sloper=77b875b0=Tue Mar 31 2015 20:59:30
+PJ=875378b0=Tue Mar 31 2015 20:59:53
+Andrew King=c7a279b0=Tue Mar 31 2015 21:06:02
+Jack Jensen=07d06cb0=Tue Mar 31 2015 21:12:41
+Ryan Kelly=c06e682b=Tue Mar 31 2015 21:12:58
+Logan Traffas=97e673b0=Tue Mar 31 2015 21:30:49
+Matthew Macovsky=20f02c2b=Tue Mar 31 2015 21:31:15
+Matthew Macovsky=20f02c2b=Tue Mar 31 2015 21:31:24
+Andrew Kassab=20466b2b=Tue Mar 31 2015 21:31:29
+Austin Hohenshelt=47d176b0=Tue Mar 31 2015 21:31:59
+Andrew Kassab=20466b2b=Mon Apr  6 2015 18:57:24
+Matthew Macovsky=20f02c2b=Mon Apr  6 2015 19:03:51
+Kjel Pettenger-Willey=10539c1e=Mon Apr  6 2015 19:04:27
+Thomas Woltjer=d72a74b0=Mon Apr  6 2015 19:04:41
+Thomas Woltjer=d72a74b0=Mon Apr  6 2015 20:04:41
+Andrew King=c7a279b0=Mon Apr  6 2015 19:04:50
+Andrew King=c7a279b0=Mon Apr  6 2015 19:54:50
+Steve Tarr=b0056a2b=Mon Apr  6 2015 19:05:06
+Zach Sloper=77b875b0=Mon Apr  6 2015 19:41:38
+Steve Tarr=b0056a2b=Mon Apr  6 2015 19:43:25
+Kjel Pettenger-Willey=10539c1e=Mon Apr  6 2015 19:47:29
+Andrew Kassab=20466b2b=Mon Apr  6 2015 19:55:30
+Matthew Macovsky=20f02c2b=Mon Apr  6 2015 19:55:35
+Zach Sloper=77b875b0=Mon Apr  6 2015 19:58:22
+Benjamin Chan=c74772b0=Tue Apr  7 2015 18:27:47
+Zach Sloper=77b875b0=Tue Apr  7 2015 18:29:45
+Ryan Kelly=c06e682b=Tue Apr  7 2015 18:31:09
+Tristan Briggler=d7d16bb0=Tue Apr  7 2015 18:33:21
+Andrew Kassab=20466b2b=Tue Apr  7 2015 18:34:59
+Logan Traffas=97e673b0=Tue Apr  7 2015 18:36:19
+Jack Jensen=07d06cb0=Tue Apr  7 2015 18:41:19
+Andrew King=c7a279b0=Tue Apr  7 2015 18:41:47
+Andrew King=c7a279b0=Tue Apr  7 2015 18:41:56
+Andrew Kassab=20466b2b=Tue Apr  7 2015 20:05:30
+Andrew King=c7a279b0=Tue Apr  7 2015 20:19:27
+Andrew King=c7a279b0=Tue Apr  7 2015 20:19:38
+Jack Jensen=07d06cb0=Tue Apr  7 2015 20:59:23
+Zach Sloper=77b875b0=Tue Apr  7 2015 20:59:38
+Benjamin Chan=c74772b0=Tue Apr  7 2015 20:59:48
+Ryan Kelly=c06e682b=Tue Apr  7 2015 21:00:04
+Tristan Briggler=d7d16bb0=Tue Apr  7 2015 21:00:15
+Logan Traffas=97e673b0=Tue Apr  7 2015 21:02:37
+Steve Tarr=b0056a2b=Wed Apr  8 2015 18:30:37
+Andrew Kassab=20466b2b=Wed Apr  8 2015 18:34:59
+Jacob Tiderman=d0e06d2b=Wed Apr  8 2015 18:36:13
+Logan Traffas=97e673b0=Wed Apr  8 2015 18:40:38
+Thomas Woltjer=d72a74b0=Wed Apr  8 2015 18:43:00
+Thomas Woltjer=d72a74b0=Wed Apr  8 2015 18:43:05
