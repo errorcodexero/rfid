@@ -7,7 +7,6 @@ b77774b0=Tim Bennington Davis
 273275b0=Calvin McHenry
 a7c574b0=Bob Tidrick
 20f02c2b=Matthew Macovsky
-30f02c2b=JFK
 57c378b0=Joslyn McLaughlin
 0062672b=Jared Tence
 802e682b=Eric Rippey
