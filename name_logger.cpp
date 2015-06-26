@@ -20,7 +20,7 @@ const unsigned int ESTIMATED_PRESENT_TIME=1;
 //error codes w/ light
 
 vector<vector<string> > checkSigns(string RFID_code) {
-	ifstream log_of_times("logOfTimes.txt");
+	ifstream log_of_times("2015_offseason.txt");
 	vector<vector<string> > out_vector;
 	vector<string> sign_ins;
 	vector<string> sign_outs;
@@ -109,7 +109,7 @@ void outputAttendance(string RFID_in, string name, string sign_in_time){//Output
 	if(name!=""){
 		ofstream log_of_times;
 		ifstream result2("result.txt");
-		log_of_times.open("logOfTimes.txt",ios::app);
+		log_of_times.open("2015_offseason.txt",ios::app);
 		log_of_times<<name<<"="<<RFID_in<<"="<<sign_in_time<<endl; 
 		log_of_times.close();
 		log_of_times.open("result.txt");
