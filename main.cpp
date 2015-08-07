@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <tchar.h>
-#include "SerialClass.h"	// Library described above
+#include "SerialClass.h"
 #include <string>
 #include <fstream>
 
@@ -12,27 +12,36 @@ int _tmain(int argc, _TCHAR* argv[])
 	Serial* SP = new Serial("\\\\.\\COM12");    // adjust as needed - "\\\\.\\" is necessary as a prefix for COM ports 10 and above
 
 	if (SP->IsConnected())
-		printf("We're connected");
+		printf("We're connected\n");
 
 	char incomingData[256] = "";			// don't forget to pre-allocate memory
 	//printf("%s\n",incomingData);
 	int dataLength = 256;
 	int readResult = 0;
+	
+	/*OVERLAPPED o = {0};
+	o.hEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
 
+	SetCommMask(&SP, EV_RXCHAR);
+	
+	DWORD commEvent;
+	while (!WaitCommEvent(&SP, &commEvent, &o))
+	{
+		printf("HELP");
+	}*/
+	
 	while(SP->IsConnected())
 	{
 		readResult = SP->ReadData(incomingData,dataLength);
-		//printf("Bytes read: (-1 means no data available) %i\n",readResult);
+		printf("Bytes read: (-1 means no data available) %i\n",readResult);
 
 		std::string test(incomingData);
-		std::ofstream print_to;
-		print_to.open("print_to.txt", std::ofstream::app);
-		print_to<<incomingData<<std::endl;
-		print_to.close();
-		//printf("%s\n",incomingData);
+		//std::ofstream print_to;
+		//print_to.open("print_to.txt", std::ofstream::app);
+		//print_to<<incomingData<<std::endl;
+		//print_to.close();
+		printf("%s\n",incomingData);
 		test = "";
-
-		Sleep(1000);
 	}
 	return 0;
 }

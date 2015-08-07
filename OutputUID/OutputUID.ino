@@ -25,9 +25,12 @@
 #define RST_PIN    9 
 #define SS_PIN    10
 
+int incoming_data = 0;
+
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
 
 void setup() {
+  pinMode(3, OUTPUT);
   Serial.begin(9600);   // Initialize serial communications with the PC
   while (!Serial);    // Do nothing if no serial port is opened (added for Arduinos based on ATMEGA32U4)
   SPI.begin();      // Init SPI bus
@@ -35,6 +38,8 @@ void setup() {
 }
 
 void loop() {
+  //digitalWrite(3, LOW);
+  
   // Look for new cards
   if ( ! mfrc522.PICC_IsNewCardPresent()) {
     return;
@@ -47,4 +52,12 @@ void loop() {
 
   //Output the UID over the serial cable
   mfrc522.PICC_OutputUID(&(mfrc522.uid));
+  
+  while (Serial.available() < 1) {
+
+  }
+  incoming_data = Serial.read();
+  
+  //digitalWrite(3, HIGH);
+  delay(1000);
 }
