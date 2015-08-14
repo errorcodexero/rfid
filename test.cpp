@@ -14,12 +14,12 @@ int _tmain(
     BOOL fSuccess;
     DWORD dwEvtMask;
 
-    hCom = CreateFile( TEXT("\\\\.\\COM12"),
+    hCom = CreateFile( TEXT("\\\\.\\COM3"),
         GENERIC_READ | GENERIC_WRITE,
         0,    // exclusive access 
         NULL, // default security attributes 
         OPEN_EXISTING,
-        FILE_FLAG_OVERLAPPED,
+		FILE_FLAG_OVERLAPPED,
         NULL 
         );
 
@@ -57,11 +57,13 @@ int _tmain(
     o.OffsetHigh = 0;
 
     assert(o.hEvent);
-
-	char chBuffer[1024] = "";
+	
+	printf("Test\n");
+	char chBuffer[256];
 	DWORD dwBytesRead = 0;
+	FlushFileBuffers(hCom);
     while (!WaitCommEvent(hCom, &dwEvtMask, &o)) {}
-	ReadFile(hCom, &chBuffer, 1024, &dwBytesRead, &o);
+	ReadFile(hCom, &chBuffer, 2, &dwBytesRead, &o);
 	std::string stringy(chBuffer);
 	printf("%s\n", chBuffer);
     /*else
@@ -76,5 +78,7 @@ int _tmain(
         else 
             printf("Wait failed with error %d.\n", GetLastError());
     }*/
+	CloseHandle(hCom);
+	CloseHandle(o.hEvent);
 	return 0;
 }

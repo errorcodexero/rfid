@@ -38,7 +38,7 @@ void setup() {
 }
 
 void loop() {
-  //digitalWrite(3, LOW);
+  digitalWrite(3, LOW);
   
   // Look for new cards
   if ( ! mfrc522.PICC_IsNewCardPresent()) {
@@ -52,12 +52,13 @@ void loop() {
 
   //Output the UID over the serial cable
   mfrc522.PICC_OutputUID(&(mfrc522.uid));
-  
+  //Serial.flush();
+
   while (Serial.available() < 1) {
 
   }
   incoming_data = Serial.read();
   
-  //digitalWrite(3, HIGH);
+  digitalWrite(3, HIGH);
   delay(1000);
 }

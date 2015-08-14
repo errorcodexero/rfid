@@ -1223,7 +1223,6 @@ void MFRC522::PICC_OutputUID(Uid *uid) {
 			Serial.print(F("0"));
 		Serial.print(uid->uidByte[i], HEX);
 	}
-	Serial.println();
 }
 
 /**
