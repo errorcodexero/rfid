@@ -47,6 +47,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	std::string uid(chBuffer);
 	uid = uid.substr(0, 8);
 	printf("%s\n", uid.c_str());
+	if (uid == "FFFFFFFF") printf("Button was pressed.\n");
 	
 	DWORD dwBytesWritten = 0;
 	//char toWrite[1024] = "";
