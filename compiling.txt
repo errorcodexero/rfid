@@ -1,1 +1,0 @@
-x86_64-w64-mingw32-g++ Serial.cpp main.cpp -Wall -static -static-libgcc -static-libstdc++

@@ -29,7 +29,7 @@
 #define SS_PIN    10
 
 int button_state;
-int incoming_data = 0;
+char incoming_data;
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);  // Create MFRC522 instance
 
@@ -43,6 +43,7 @@ void setup() {
 }
 
 void loop() {
+  //Turn LED blue
   digitalWrite(LED_PIN, LOW);
 
   button_state = digitalRead(BUTTON_PIN);
@@ -61,16 +62,38 @@ void loop() {
   if (button_state == HIGH) {
     //Indicate that the button was pressed over the serial cable
     Serial.print("FFFFFFFF");
+    //Turn LED blue
   } else {
     //Output the UID over the serial cable
     mfrc522.PICC_OutputUID(&(mfrc522.uid));
   }
 
-  while (Serial.available() < 1) {
-
-  }
+  while (Serial.available() < 1) {}
   incoming_data = Serial.read();
-  
-  digitalWrite(LED_PIN, HIGH);
+
+  switch(incoming_data) {
+    //Logged
+    case '0':
+      //Turn LED green
+      //High-pitched beep
+      digitalWrite(LED_PIN, HIGH);
+      break;
+      
+    //Error
+    case '1':
+      //Turn LED red
+      //Low-pitched beep
+      break;
+      
+    //Quitting
+    case '2':
+      //Turn LED orange
+      break;
+      
+    //Bug/Should not happen
+    default:
+      //Turn LED yellow
+      break;
+  }
   delay(1000);
 }
