@@ -134,9 +134,14 @@ bool checkName(std::string *name) {
 
 int _tmain(int argc, _TCHAR* argv[]) {
 	bool quitting = false;
-
+	
 	std::string no_arduino_str = "-noarduino";
-	bool use_arduino = !((argc > 1) && (argv[1] == no_arduino_str));
+	bool use_arduino = [&]() {
+		for (int i = 0; i < argc; i++) {
+			if (argv[i] == no_arduino_str) return false;
+		}
+		return true;
+	}();
 	
 	if (use_arduino) {
 		Led_mode led_mode;
