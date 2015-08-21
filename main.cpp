@@ -41,12 +41,12 @@ Time getTime() {
 	time_t rawtime;
 	struct tm * ptm;
 	time (&rawtime);
-	ptm = localtime(&rawtime);
+	ptm = gmtime(&rawtime);
 	Time t;
 	t.year = (ptm->tm_year) + 1900;
 	t.month = (ptm->tm_mon) + 1;
 	t.day = ptm->tm_mday;
-	t.hour = (ptm->tm_hour) + 16;
+	t.hour = (ptm->tm_hour) + 17;
 	t.minute = ptm->tm_min;
 	t.second = ptm->tm_sec;
 	return t;
@@ -78,6 +78,7 @@ void logAttendance(std::string name) {
 	for (int i = name.size(); i < NAME_SPACE; i++) log<<" ";
 	log<<"="<<" "<<formatted_time;
 	log.close();
+	//Print out name, sign-in/sign-out, and time
 }
 
 //Gets the name that goes with a uid
@@ -132,102 +133,123 @@ bool checkName(std::string *name) {
 }
 
 int _tmain(int argc, _TCHAR* argv[]) {
-	Led_mode led_mode;
-	
 	bool quitting = false;
 
-	HANDLE hCom;
-	hCom = CreateFile( TEXT("\\\\.\\COM3"),
-		GENERIC_READ | GENERIC_WRITE,
-		0,                            // exclusive access 
-		NULL,                         // default security attributes 
-		OPEN_EXISTING,
-		FILE_ATTRIBUTE_NORMAL,        //FILE_FLAG_OVERLAPPED
-		NULL 
-	);
+	std::string no_arduino_str = "-noarduino";
+	bool use_arduino = !((argc > 1) && (argv[1] == no_arduino_str));
+	
+	if (use_arduino) {
+		Led_mode led_mode;
 
-	SetCommMask(hCom, EV_RXCHAR);
+		HANDLE hCom;
+		hCom = CreateFile(
+			TEXT("\\\\.\\COM3"),          //Change to whatever COM port the Arduino is on
+			GENERIC_READ | GENERIC_WRITE,
+			0,                            // exclusive access 
+			NULL,                         // default security attributes 
+			OPEN_EXISTING,
+			FILE_ATTRIBUTE_NORMAL,        //FILE_FLAG_OVERLAPPED
+			NULL
+		);
 
-	while (!quitting) {
-		DWORD dw_evt_mask;
-		char ch_buffer[1024] = "";
-		DWORD dw_bytes_read = 0;
-		
-		WaitCommEvent(hCom, &dw_evt_mask, NULL);
-		
-		ReadFile(hCom, &ch_buffer, 8, &dw_bytes_read, NULL);
-		
-		std::string uid(ch_buffer);
-		uid = uid.substr(0, 8);
-		//printf("%s\n", uid.c_str());
-		
-		if (uid == "FFFFFFFF") {
-			std::cout<<"Please enter either your first and last name or \"quit\" to quit."<<std::endl;
+		SetCommMask(hCom, EV_RXCHAR);
+
+		while (!quitting) {
+			DWORD dw_evt_mask;
+			char ch_buffer[1024] = "";
+			DWORD dw_bytes_read = 0;
 			
-			bool timed_out = false;
-			char buffer[256] = {0};
-			data arg = {buffer, 256};
-			HANDLE hThread; 
-			DWORD id;
-			std::string name;
-
-			hThread = CreateThread(NULL, 0, getInput, &arg, 0, &id);
-
-			if (hThread != NULL) {
-				if (WaitForSingleObjectEx(hThread, MANUAL_ENTRY_TIME, FALSE) == WAIT_TIMEOUT) {
-					std::cout<<"User timed out."<<std::endl;
-					timed_out = true;
-				} else {
-					name = buffer;
-				}
-				CloseHandle(hThread);
-			}
+			WaitCommEvent(hCom, &dw_evt_mask, NULL);
 			
-			if (!timed_out) {
-				if (name != "quit") {
-					bool valid_name = checkName(&name);
-					if (valid_name) {
-						logAttendance(name);
-						led_mode = Led_mode::LOGGED;
+			ReadFile(hCom, &ch_buffer, 8, &dw_bytes_read, NULL);
+			
+			std::string uid(ch_buffer);
+			uid = uid.substr(0, 8);
+			
+			if (uid == "FFFFFFFF") {
+				std::cout<<"Please enter either your first and last name or \"quit\" to quit."<<std::endl;
+				
+				bool timed_out = false;
+				char buffer[256] = {0};
+				data arg = {buffer, 256};
+				HANDLE hThread; 
+				DWORD id;
+				std::string name;
+
+				hThread = CreateThread(NULL, 0, getInput, &arg, 0, &id);
+
+				if (hThread != NULL) {
+					if (WaitForSingleObjectEx(hThread, MANUAL_ENTRY_TIME, FALSE) == WAIT_TIMEOUT) {
+						std::cout<<"User timed out."<<std::endl;
+						timed_out = true;
 					} else {
-						std::cout<<"Invalid entry.  Either the name was entered incorrectly or no such name is stored in the system."<<std::endl;
-						led_mode = Led_mode::LOGGING_ERROR;
+						name = buffer;
 					}
+					CloseHandle(hThread);
+				}
+				
+				if (!timed_out) {
+					if (name != "quit") {
+						bool valid_name = checkName(&name);
+						if (valid_name) {
+							logAttendance(name);
+							led_mode = Led_mode::LOGGED;
+						} else {
+							std::cout<<"Invalid entry.  Either the name was entered incorrectly or no such name is stored in the system."<<std::endl;
+							led_mode = Led_mode::LOGGING_ERROR;
+						}
+					} else {
+						quitting = true;
+						led_mode = Led_mode::QUITTING;
+					}
+				}
+			} else {
+				bool valid_uid = checkUID(uid);
+				if (valid_uid) {
+					std::string name = getName(uid);
+					logAttendance(name);
+					led_mode = Led_mode::LOGGED;
 				} else {
-					quitting = true;
-					led_mode = Led_mode::QUITTING;
+					std::cout<<"Invalid tag.  Either your tag is damaged or no such tag is stored in the system."<<std::endl;
+					led_mode = Led_mode::LOGGING_ERROR;
 				}
 			}
-		} else {
-			bool valid_uid = checkUID(uid);
-			if (valid_uid) {
-				std::string name = getName(uid);
-				logAttendance(name);
-				led_mode = Led_mode::LOGGED;
+			
+			DWORD dw_bytes_written = 0;
+			char to_write[2] = {[&]() {
+				switch (led_mode) {
+					case Led_mode::LOGGED:
+						return '0';
+					case Led_mode::LOGGING_ERROR:
+						return '1';
+					case Led_mode::QUITTING:
+						return '2';
+					default:
+						assert(0);
+				}
+				return '3';
+			}()};
+			
+			WriteFile(hCom, to_write, 1, &dw_bytes_written, NULL);
+		}
+		CloseHandle(hCom);
+	} else {
+		while(!quitting) {
+			std::cout<<"Please enter either your first and last name or \"quit\" to quit."<<std::endl;
+			std::string name;
+			getline(std::cin, name);
+			if (name != "quit") {
+				bool valid_name = checkName(&name);
+				if (valid_name) {
+					logAttendance(name);
+				} else {
+					std::cout<<"Invalid entry.  Either the name was entered incorrectly or no such name is stored in the system."<<std::endl;
+				}
 			} else {
-				std::cout<<"Invalid tag.  Either your tag is damaged or no such tag is stored in the system."<<std::endl;
-				led_mode = Led_mode::LOGGING_ERROR;
+				quitting = true;
 			}
 		}
-		
-		DWORD dw_bytes_written = 0;
-		char to_write[2] = {[&]() {
-			switch (led_mode) {
-				case Led_mode::LOGGED:
-					return '0';
-				case Led_mode::LOGGING_ERROR:
-					return '1';
-				case Led_mode::QUITTING:
-					return '2';
-				default:
-					assert(0);
-			}
-			return '3';
-		}()};
-		
-		WriteFile(hCom, to_write, 1, &dw_bytes_written, NULL);
 	}
-	
-	CloseHandle(hCom);
+
 	return 0;
 }
