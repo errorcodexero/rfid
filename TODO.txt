@@ -1,3 +1,5 @@
- - Use an RGB LED
- - Use a buzzer
- - Have a second button to exit the program
+ - Have a configuration file for the COM Port and file names
+ - File for alternate names for people
+ - Linux functionality, accessible via command line argument or config file
+ - UI, in config
+ - README
