@@ -1,3 +1,2 @@
  - Use an RGB LED
  - Use a buzzer
- - Have a second button to exit the program

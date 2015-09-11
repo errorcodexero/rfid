@@ -1,1 +1,4 @@
 //This log contains records of all sign-ins and sign-outs by members of the team
+Matthew Macovsky        = 36:55:32 08/26/2015
+Matthew Macovsky        = 17:26:06 09/11/2015
+Logan Traffas           = 17:26:12 09/11/2015

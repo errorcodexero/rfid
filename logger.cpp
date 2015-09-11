@@ -2,14 +2,13 @@
 #include <tchar.h>
 #include <windows.h>
 #include <stdlib.h>
-#include <string>
-#include <fstream>
 #include <iostream>
 #include <cstddef>
 #include <ctime>
 #include <cassert>
 #include <sstream>
-#include <algorithm>
+
+#include "rfid.h"
 
 #define NAME_SPACE 24
 
@@ -20,15 +19,6 @@ enum Led_mode {LOGGED, LOGGING_ERROR, QUITTING};
 struct data {
 	char *buffer;
 	std::size_t size;
-};
-
-struct Time {
-	int year;
-	int month;
-	int day;
-	int hour;
-	int minute;
-	int second;
 };
 
 DWORD WINAPI getInput(LPVOID arg) {
@@ -50,23 +40,6 @@ Time getTime() {
 	t.minute = ptm->tm_min;
 	t.second = ptm->tm_sec;
 	return t;
-}
-
-//Formats the time from a Time structure to a string to be used in the log
-std::string formatTime(Time time) {
-	std::stringstream formatted_time;
-	if (time.hour < 10) formatted_time<<0;
-	formatted_time<<time.hour<<":";
-	if (time.minute < 10) formatted_time<<0;
-	formatted_time<<time.minute<<":";
-	if (time.second < 10) formatted_time<<0;
-	formatted_time<<time.second<<" ";
-	if (time.month < 10) formatted_time<<0;
-	formatted_time<<time.month<<"/";
-	if (time.day < 10) formatted_time<<0;
-	formatted_time<<time.day<<"/";
-	formatted_time<<time.year;
-	return formatted_time.str();
 }
 
 //Prints a line in the log file with the person's name and the current time
@@ -96,39 +69,18 @@ std::string getName(std::string uid) {
 
 //Checks to see if a received UID is valid
 bool checkUID(std::string uid) {
-	std::string line;
-	std::ifstream ids_and_names("ids_and_names.txt");
-	while (!ids_and_names.eof()) {
-		getline(ids_and_names, line);
-		if (line.find(uid) != std::string::npos) {
-			ids_and_names.close();
-			return true;
-		}
-	}
-	ids_and_names.close();
-	return false;
-}
-
-//Checks to see if an entered name is valid
-bool checkName(std::string *name) {
-	std::string name_use = *name;
-	std::transform(name_use.begin(), name_use.end(), name_use.begin(), ::tolower);
-	std::string line;
-	std::string line_normal;
-	std::ifstream ids_and_names("ids_and_names.txt");
-	while (!ids_and_names.eof()) {
-		getline(ids_and_names, line);
-		line_normal = line;
-		std::transform(line.begin(), line.end(), line.begin(), ::tolower);
-		if (line.find(name_use) != std::string::npos) {
-			if ((line.substr(line.find(name_use)) == name_use) && (line.find(name_use) == (line.find("=") + 2))) {
+	if (uid.size() == 8) {
+		std::string line;
+		std::ifstream ids_and_names("ids_and_names.txt");
+		while (!ids_and_names.eof()) {
+			getline(ids_and_names, line);
+			if (line.find(uid) != std::string::npos) {
 				ids_and_names.close();
-				*name = line_normal.substr(line.find(name_use));
 				return true;
 			}
 		}
+		ids_and_names.close();
 	}
-	ids_and_names.close();
 	return false;
 }
 
@@ -159,6 +111,11 @@ int _tmain(int argc, _TCHAR* argv[]) {
 
 		SetCommMask(hCom, EV_RXCHAR);
 
+		DWORD dw_bytes_written_clear = 0;
+		char to_write_clear[2] = {'9'};
+		
+		WriteFile(hCom, to_write_clear, 1, &dw_bytes_written_clear, NULL);
+		
 		while (!quitting) {
 			DWORD dw_evt_mask;
 			char ch_buffer[1024] = "";
@@ -187,6 +144,10 @@ int _tmain(int argc, _TCHAR* argv[]) {
 					if (WaitForSingleObjectEx(hThread, MANUAL_ENTRY_TIME, FALSE) == WAIT_TIMEOUT) {
 						std::cout<<"User timed out."<<std::endl;
 						timed_out = true;
+						/*std::streambuf* orig = std::cin.rdbuf();
+						std::istringstream input("\n");
+						std::cin.rdbuf(input.rdbuf());
+						std::cin.rdbuf(orig);*/
 					} else {
 						name = buffer;
 					}
@@ -195,6 +156,10 @@ int _tmain(int argc, _TCHAR* argv[]) {
 				
 				if (!timed_out) {
 					if (name != "quit") {
+						//std::cout<<std::endl<<"NAME: "<<name<<std::endl;
+						/*for (unsigned int i = 0; i < name.size(); i++) {
+							if (name[i] == '\n') name.erase(i, 1);
+						}*/
 						bool valid_name = checkName(&name);
 						if (valid_name) {
 							logAttendance(name);
@@ -207,6 +172,8 @@ int _tmain(int argc, _TCHAR* argv[]) {
 						quitting = true;
 						led_mode = Led_mode::QUITTING;
 					}
+				} else {
+					led_mode = Led_mode::LOGGING_ERROR;
 				}
 			} else {
 				bool valid_uid = checkUID(uid);
