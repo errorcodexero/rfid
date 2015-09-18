@@ -84,7 +84,7 @@ bool checkUID(std::string uid) {
 	return false;
 }
 
-int _tmain(int argc, _TCHAR* argv[]) {
+int main(int argc, char* argv[]) {
 	bool quitting = false;
 	
 	std::string no_arduino_str = "-noarduino";
