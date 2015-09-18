@@ -12,6 +12,9 @@ bool checkName(std::string *name) {
 	std::ifstream ids_and_names("ids_and_names.txt");
 	while (!ids_and_names.eof()) {
 		getline(ids_and_names, line);
+		for(unsigned int i=0; i<line.size(); i++){
+			if(line[i]=='\n' || line[i]=='\r')line.erase(line.begin()+i);
+		}
 		line_normal = line;
 		std::transform(line.begin(), line.end(), line.begin(), ::tolower);
 		if (line.find(name_use) != std::string::npos) {
