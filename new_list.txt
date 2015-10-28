@@ -1,57 +1,54 @@
-Anthony Bates
-Sarah Briggler
-Tristan Briggler
-Jacob Brin
-Gavin Brister
-Nick Burrell
-Peyton Butler
-Ryan Caday
-Peter Carr
-Tristan Carvano
-Benjamin Chan
-Philip Chan
-Samantha Edwards
-Ian Flynn
-Zack Friedman
-Clara Griffin
-Sarah Griffin
-Adrian Hardt
-Elise Hlady
-Austin Hohenshelt
-Beth Hoots
-Justin Isert
-Erin Janicki
-Jack Jensen
-Trevor Johnson
-Andrew Kassab
-Mia Kassab
-Drew King
-Zachary Luetjen
-Matthew Macovsky
-Ibrahim Mahmoud
-Calvin Mc Henry
-Zach Mendenhall
-Yewon Na
-Alyssa Oman
-Maritza Perez
-Luke Puppo
-Noah Radcliffe
-Nathan Rice
-Eric Rippey
-Thomas Shanks
-Zach Sloper
-Luke Somerscales
-Zachary Starr
-Jared Tence
-Mike Tidball
-Nathan Tidball
-Jacob Tiderman
-Logan Traffas
-Daryl Wainwright
-Alanna Wilde
-Joseph Wilde
-Gabrielle Wille
-Chris Winjum
-Thomas Woltjer
-Ethan Yochim
-Katherine Yoo
+ = Anthony Bates
+ = Tim BD
+ = Sarah Briggler
+ = Tristan Briggler
+ = Gavin Brister
+ = Nick Burrell
+ = Peyton Butler
+ = Peter Carr
+ = Tristan Carvano
+ = Benjamin Chan
+ = Philip Chan
+ = Sami Edwards
+ = Ian Flynn
+ = Zack Friedman
+ = Clara Griffin
+ = Sarah Griffin
+ = Adrian Hardt
+ = Elise Hlady
+ = Austin Hohenshelt
+ = Beth Hoots
+ = Justin Isert
+ = Erin Janicki
+ = Jack Jensen
+ = Trevor Johnson
+ = Andrew Kassab
+ = Mia Kassab
+ = Ryan Kelley
+ = Drew King
+ = Jeff Lewis
+ = Matthew Macovsky
+ = Calvin Mc Henry
+ = Zach Mendenhall
+ = Alyssa Oman
+ = Maritza Perez
+ = Noah Radcliffe
+ = Nathan Rice
+ = Eric Rippey
+ = Thomas Shanks
+ = Yogurt Sheep
+ = Zach Sloper
+ = Zachary Starr
+ = Marshall Stowell
+ = Jared Tence
+ = Mike Tidball
+ = Nathan Tidball
+ = Jacob Tiderman
+ = Logan Traffas
+ = Teresa Valdez
+ = Daryl Wainwright
+ = Alanna Wilde
+ = Joseph Wilde
+ = Chris Winjum
+ = Thomas Woltjer
+ = Katherine Yoo
