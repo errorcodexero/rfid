@@ -9,6 +9,7 @@
  = Tristan Carvano
  = Benjamin Chan
  = Philip Chan
+ = Forrest Edwards
  = Sami Edwards
  = Ian Flynn
  = Zack Friedman
@@ -28,7 +29,7 @@
  = Drew King
  = Jeff Lewis
  = Matthew Macovsky
- = Calvin Mc Henry
+ = Calvin McHenry
  = Zach Mendenhall
  = Alyssa Oman
  = Maritza Perez
@@ -36,10 +37,11 @@
  = Nathan Rice
  = Eric Rippey
  = Thomas Shanks
- = Yogurt Sheep
  = Zach Sloper
+ = Tom Sommerville
  = Zachary Starr
  = Marshall Stowell
+ = Steve Tarr
  = Jared Tence
  = Mike Tidball
  = Nathan Tidball
