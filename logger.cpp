@@ -37,7 +37,7 @@ Time getTime() {
 	t.year = (ptm->tm_year) + 1900;
 	t.month = (ptm->tm_mon) + 1;
 	t.day = ptm->tm_mday;
-	t.hour = (ptm->tm_hour) + 17;
+	t.hour = (ptm->tm_hour) + 16;
 	t.minute = ptm->tm_min;
 	t.second = ptm->tm_sec;
 	return t;
