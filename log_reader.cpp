@@ -1,4 +1,3 @@
-#include <vector>
 #include "rfid.h"
 
 enum check {CHECK_MONTH_DAYS};
@@ -94,18 +93,6 @@ std::ostream& operator<<(std::ostream& os, Time t) {
 	return os;
 }
 
-//Breaks up a formatted time and creates a Time out of it
-Time parseFormattedTime(std::string time_string) {
-	Time t;
-	t.hour = (int) strtol(time_string.substr(0, 2).c_str(), nullptr, 10);
-	t.minute = (int) strtol(time_string.substr(3, 2).c_str(), nullptr, 10);
-	t.second = (int) strtol(time_string.substr(6, 2).c_str(), nullptr, 10);
-	t.month = (int) strtol(time_string.substr(9, 2).c_str(), nullptr, 10);
-	t.day = (int) strtol(time_string.substr(12, 2).c_str(), nullptr, 10);
-	t.year = (int) strtol(time_string.substr(15, 4).c_str(), nullptr, 10);
-	return t;
-}
-
 /*
 Possible printouts:
 mm/dd/yyyy hh:mm:ss
@@ -118,23 +105,7 @@ if it goes to the next day
 NAME has a total time of HOURS hours.
 */
 
-std::pair<std::vector<Time>, std::vector<Time> > getSignInsOuts(std::string name) {
-	std::ifstream log("log.txt");
-	std::vector<Time> sign_ins, sign_outs;
-	bool sign_in = true;
-	std::string line;
-	while (!log.eof()) {
-		getline(log, line);
-		removeLineBreaks(line);
-		if (line.find(name) != std::string::npos) {
-			std::string time_string = line.substr(line.find("=") + 2);
-			(sign_in ? sign_ins : sign_outs).push_back(parseFormattedTime(time_string));
-			sign_in = !sign_in;
-		}
-	}
-	return std::make_pair(sign_ins, sign_outs);
-}
-
+//Prints out a person's sign-ins and sign-outs
 void printSignInsOuts(std::pair<std::vector<Time>, std::vector<Time> > &sign_ins_outs) {
 	for(unsigned int i = 0; i < sign_ins_outs.first.size(); i++) {
 		std::cout<<std::endl<<"Signed in:  "<<formatTimeAlt(sign_ins_outs.first[i])<<std::endl;
@@ -142,6 +113,7 @@ void printSignInsOuts(std::pair<std::vector<Time>, std::vector<Time> > &sign_ins
 	}
 }
 
+//Computes the total amount of time a person has been signed in
 Time getTotalTime(std::pair<std::vector<Time>, std::vector<Time> > &sign_ins_outs) {
 	Time total;
 	for (unsigned int i = 0; i < sign_ins_outs.second.size(); i++) {
@@ -164,7 +136,8 @@ int main() {
 				std::pair<std::vector<Time>, std::vector<Time> > sign_ins_outs = getSignInsOuts(name);
 				printSignInsOuts(sign_ins_outs);
 				//Config option for hours vs extended time
-				std::cout<<std::endl<<name<<" has a total time of "<<getTotalTime(sign_ins_outs)<<"."<<std::endl;
+				Time total_time = getTotalTime(sign_ins_outs);
+				std::cout<<std::endl<<name<<" has a total time of "<<total_time.hour<<" hour"<<((total_time.hour != 1) ? "s" : "")<<"."<<std::endl;
 			} else {
 				std::cout<<std::endl<<"Invalid entry.  Either the name was entered incorrectly or no such name is stored in the system."<<std::endl;
 			}

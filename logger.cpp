@@ -42,7 +42,7 @@ Time getTime() {
 	return t;
 }
 
-//Prints a line in the log file with the person's name and the current time
+//Prints a line in the log file with the person's name and the current time and tells the user
 void logAttendance(std::string name) {
 	Time time = getTime();
 	std::string formatted_time = formatTime(time);
@@ -51,7 +51,9 @@ void logAttendance(std::string name) {
 	for (int i = name.size(); i < NAME_SPACE; i++) log<<" ";
 	log<<"="<<" "<<formatted_time;
 	log.close();
-	//Print out name, sign-in/sign-out, and time
+	std::pair<std::vector<Time>, std::vector<Time> > sign_ins_outs = getSignInsOuts(name);
+	std::string sign_in_or_out = (sign_ins_outs.first.size() == sign_ins_outs.second.size()) ? "out" : "in";
+	std::cout<<"Signed "<<sign_in_or_out<<" "<<name<<" at "<<formatTimeAlt(time)<<"."<<std::endl;
 }
 
 //Gets the name that goes with a uid

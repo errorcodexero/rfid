@@ -76,3 +76,33 @@ std::string formatTimeAlt(Time time) {
 	formatted_time<<time.second;
 	return formatted_time.str();
 }
+
+//Breaks up a formatted time and creates a Time out of it
+Time parseFormattedTime(std::string time_string) {
+	Time t;
+	t.hour = (int) strtol(time_string.substr(0, 2).c_str(), nullptr, 10);
+	t.minute = (int) strtol(time_string.substr(3, 2).c_str(), nullptr, 10);
+	t.second = (int) strtol(time_string.substr(6, 2).c_str(), nullptr, 10);
+	t.month = (int) strtol(time_string.substr(9, 2).c_str(), nullptr, 10);
+	t.day = (int) strtol(time_string.substr(12, 2).c_str(), nullptr, 10);
+	t.year = (int) strtol(time_string.substr(15, 4).c_str(), nullptr, 10);
+	return t;
+}
+
+//Gets the sign-ins and sign-outs of the given person
+std::pair<std::vector<Time>, std::vector<Time> > getSignInsOuts(std::string name) {
+	std::ifstream log("log.txt");
+	std::vector<Time> sign_ins, sign_outs;
+	bool sign_in = true;
+	std::string line;
+	while (!log.eof()) {
+		getline(log, line);
+		removeLineBreaks(line);
+		if (line.find(name) != std::string::npos) {
+			std::string time_string = line.substr(line.find("=") + 2);
+			(sign_in ? sign_ins : sign_outs).push_back(parseFormattedTime(time_string));
+			sign_in = !sign_in;
+		}
+	}
+	return std::make_pair(sign_ins, sign_outs);
+}
