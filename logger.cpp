@@ -7,7 +7,6 @@
 #include <ctime>
 #include <cassert>
 #include <sstream>
-#include <algorithm>
 
 #include "rfid.h"
 
@@ -174,7 +173,7 @@ int main(int argc, char* argv[]) {
 							/*for (unsigned int i = 0; i < name.size(); i++) {
 								if (name[i] == '\n') name.erase(i, 1);
 							}*/
-							bool valid_name = checkName(&name);
+							bool valid_name = checkName(name);
 							if (valid_name) {
 								logAttendance(name);
 								led_mode = Led_mode::LOGGED;
@@ -226,7 +225,7 @@ int main(int argc, char* argv[]) {
 			std::string name;
 			getline(std::cin, name);
 			if (name != "quit") {
-				bool valid_name = checkName(&name);
+				bool valid_name = checkName(name);
 				if (valid_name) {
 					logAttendance(name);
 				} else {

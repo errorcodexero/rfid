@@ -8,7 +8,7 @@ logger: rfid.cpp logger.cpp
 	g++ rfid.cpp logger.cpp -Wall -static -static-libgcc -static-libstdc++ -std=c++11 -o "logger.exe"
 	
 log_reader: rfid.cpp log_reader.cpp
-	g++ rfid.cpp log_reader.cpp -Wall -o "log_reader.exe"
+	g++ rfid.cpp log_reader.cpp -Wall -std=c++11 -o "log_reader.exe"
 	
 clean:
 	rm logger.exe; rm log_reader.exe;
