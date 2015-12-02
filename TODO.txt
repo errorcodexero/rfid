@@ -3,3 +3,7 @@
  - Linux functionality, accessible via command line argument or config file
  - UI, in config
  - README
+ - Amber color for signing out
+ - Log reader
+ - Auto signer-outer
+ - Serial logging option for just ids read
