@@ -1,7 +1,7 @@
- - Have a configuration file for the COM Port and file names
+ - Timed signout
+ - Have a configuration file for the COM Port, file names, and other things
  - File for alternate names for people
  - Linux functionality, accessible via command line argument or config file
- - UI, in config
  - README
  - Amber color for signing out
  - Log reader

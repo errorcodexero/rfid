@@ -15,13 +15,13 @@ int getTimePosValue(int pos, int month = 0) {
 }
 
 //Corrects for going over into the next of a larger unit of time by making adjustments to other members of the Time structure
-void correctTime(int *val1, int *val2, int pos, int month = 0) {
-	if (*val1 < 0) {
-		*val1 = ((pos == 3) ? getTimePosValue(3, month) : getTimePosValue(pos)) + *val1;
-		*val2 -= 1;
-	} else if (*val1 >= ((pos == 3) ? getTimePosValue(3, 4) : getTimePosValue(pos))) { //Always uses a value of 30 for month length
-		*val1 = *val1 - ((pos == 3) ? getTimePosValue(3, 4) : getTimePosValue(pos));   //Here too
-		*val2 += 1;
+void correctTime(int &val1, int &val2, int pos, int month = 0) {
+	if (val1 < 0) {
+		val1 = ((pos == 3) ? getTimePosValue(3, month) : getTimePosValue(pos)) + val1;
+		val2 -= 1;
+	} else if (val1 >= ((pos == 3) ? getTimePosValue(3, 4) : getTimePosValue(pos))) { //Always uses a value of 30 for month length
+		val1 = val1 - ((pos == 3) ? getTimePosValue(3, 4) : getTimePosValue(pos));   //Here too
+		val2 += 1;
 	}
 }
 
@@ -33,11 +33,11 @@ Time operator-(Time t1, Time t2) {
 	result.day = t1.day - t2.day;
 	result.month = t1.month - t2.month;
 	result.year = t1.year - t2.year;
-	correctTime(&result.second, &result.minute, 0);
-	correctTime(&result.minute, &result.hour, 1);
-	correctTime(&result.hour, &result.day, 2);
-	correctTime(&result.day, &result.month, 3, t2.month);
-	correctTime(&result.month, &result.year, 4);
+	correctTime(result.second, result.minute, 0);
+	correctTime(result.minute, result.hour, 1);
+	correctTime(result.hour, result.day, 2);
+	correctTime(result.day, result.month, 3, t2.month);
+	correctTime(result.month, result.year, 4);
 	return result;
 }
 
@@ -49,11 +49,11 @@ Time operator+(Time t1, Time t2) {
 	result.day = t1.day + t2.day;
 	result.month = t1.month + t2.month;
 	result.year = t1.year + t2.year;
-	correctTime(&result.second, &result.minute, 0);
-	correctTime(&result.minute, &result.hour, 1);
-	correctTime(&result.hour, &result.day, 2);
-	correctTime(&result.day, &result.month, 3);
-	correctTime(&result.month, &result.year, 4);
+	correctTime(result.second, result.minute, 0);
+	correctTime(result.minute, result.hour, 1);
+	correctTime(result.hour, result.day, 2);
+	correctTime(result.day, result.month, 3);
+	correctTime(result.month, result.year, 4);
 	return result;
 }
 
@@ -89,11 +89,12 @@ std::ostream& operator<<(std::ostream& os, Time t) {
 		use_comma = true;
 	}
 	if (t.second > 0) os<<(use_comma ? ", and " : "")<<t.second<<" second"<<(t.second > 1 ? "s" : "");
+	else if (!use_comma) os<<"0 hours";
 	return os;
 }
 
 /*
-Printout:
+Possible printouts:
 mm/dd/yyyy hh:mm:ss
 
 mm/dd/yyyy hh:mm:ss - hh:mm:ss
@@ -104,17 +105,43 @@ if it goes to the next day
 NAME has a total time of HOURS hours.
 */
 
+//Prints out a person's sign-ins and sign-outs
+void printSignInsOuts(std::pair<std::vector<Time>, std::vector<Time> > &sign_ins_outs) {
+	for(unsigned int i = 0; i < sign_ins_outs.first.size(); i++) {
+		std::cout<<std::endl<<"Signed in:  "<<formatTimeAlt(sign_ins_outs.first[i])<<std::endl;
+		if (i < sign_ins_outs.second.size()) std::cout<<"Signed out: "<<formatTimeAlt(sign_ins_outs.second[i])<<std::endl;
+	}
+}
+
+//Computes the total amount of time a person has been signed in
+Time getTotalTime(std::pair<std::vector<Time>, std::vector<Time> > &sign_ins_outs) {
+	Time total;
+	for (unsigned int i = 0; i < sign_ins_outs.second.size(); i++) {
+		total = total + (sign_ins_outs.second[i] - sign_ins_outs.first[i]);
+	}
+	return total;
+}
+
 int main() {
 	bool quitting = false;
 	
 	while(!quitting) {
-		std::cout<<"Please enter a first and last name for the matching log records, or \"quit\" to quit: ";
+		std::cout<<std::endl<<"Please enter a first and last name for the matching log records, or \"quit\" to quit: ";
 		std::string name;
 		getline(std::cin, name);
 		
 		if (name != "quit") {
-			bool valid_name = checkName(&name);
-			std::cout<<valid_name<<std::endl;
+			bool valid_name = checkName(name);
+			if (valid_name) {
+				std::pair<std::vector<Time>, std::vector<Time> > sign_ins_outs = getSignInsOuts(name);
+				printSignInsOuts(sign_ins_outs);
+				//Config option for hours vs extended time
+				Time total_time = getTotalTime(sign_ins_outs);
+				std::cout<<std::endl<<name<<" has a total time of "<<total_time.hour<<" hour"<<((total_time.hour != 1) ? "s" : "")<<"."<<std::endl;
+			} else {
+				std::cout<<std::endl<<"Invalid entry.  Either the name was entered incorrectly or no such name is stored in the system."<<std::endl;
+			}
+			std::cout<<"---------------------------------------------------------------";
 		} else {
 			quitting = true;
 		}

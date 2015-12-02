@@ -7,7 +7,6 @@
 #include <ctime>
 #include <cassert>
 #include <sstream>
-#include <algorithm>
 
 #include "rfid.h"
 
@@ -43,7 +42,7 @@ Time getTime() {
 	return t;
 }
 
-//Prints a line in the log file with the person's name and the current time
+//Prints a line in the log file with the person's name and the current time and tells the user
 void logAttendance(std::string name) {
 	Time time = getTime();
 	std::string formatted_time = formatTime(time);
@@ -52,7 +51,9 @@ void logAttendance(std::string name) {
 	for (int i = name.size(); i < NAME_SPACE; i++) log<<" ";
 	log<<"="<<" "<<formatted_time;
 	log.close();
-	//Print out name, sign-in/sign-out, and time
+	std::pair<std::vector<Time>, std::vector<Time> > sign_ins_outs = getSignInsOuts(name);
+	std::string sign_in_or_out = (sign_ins_outs.first.size() == sign_ins_outs.second.size()) ? "out" : "in";
+	std::cout<<"Signed "<<sign_in_or_out<<" "<<name<<" at "<<formatTimeAlt(time)<<"."<<std::endl;
 }
 
 //Gets the name that goes with a uid
@@ -174,7 +175,7 @@ int main(int argc, char* argv[]) {
 							/*for (unsigned int i = 0; i < name.size(); i++) {
 								if (name[i] == '\n') name.erase(i, 1);
 							}*/
-							bool valid_name = checkName(&name);
+							bool valid_name = checkName(name);
 							if (valid_name) {
 								logAttendance(name);
 								led_mode = Led_mode::LOGGED;
@@ -226,7 +227,7 @@ int main(int argc, char* argv[]) {
 			std::string name;
 			getline(std::cin, name);
 			if (name != "quit") {
-				bool valid_name = checkName(&name);
+				bool valid_name = checkName(name);
 				if (valid_name) {
 					logAttendance(name);
 				} else {
