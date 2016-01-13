@@ -137,6 +137,8 @@ int main() {
 				printSignInsOuts(sign_ins_outs);
 				//Config option for hours vs extended time
 				Time total_time = getTotalTime(sign_ins_outs);
+				//Make this a flag
+				//std::cout<<std::endl<<name<<" has a total time of "<<total_time<<"."<<std::endl;
 				std::cout<<std::endl<<name<<" has a total time of "<<total_time.hour<<" hour"<<((total_time.hour != 1) ? "s" : "")<<"."<<std::endl;
 			} else {
 				std::cout<<std::endl<<"Invalid entry.  Either the name was entered incorrectly or no such name is stored in the system."<<std::endl;

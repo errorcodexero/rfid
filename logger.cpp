@@ -10,8 +10,6 @@
 
 #include "rfid.h"
 
-#define NAME_SPACE 24
-
 #define MANUAL_ENTRY_TIME 30000
 
 enum Led_mode {LOGGED, LOGGING_ERROR, QUITTING};
@@ -24,36 +22,6 @@ struct data {
 DWORD WINAPI getInput(LPVOID arg) {
 	data *buf = (data*)arg;
 	return !std::cin.getline(buf->buffer, buf->size);
-}
-
-//Gets the current time and returns a Time structure filled in with the correct values
-Time getTime() {
-	time_t rawtime;
-	struct tm * ptm;
-	time (&rawtime);
-	ptm = gmtime(&rawtime);
-	Time t;
-	t.year = (ptm->tm_year) + 1900;
-	t.month = (ptm->tm_mon) + 1;
-	t.day = ptm->tm_mday;
-	t.hour = (ptm->tm_hour) + 16;
-	t.minute = ptm->tm_min;
-	t.second = ptm->tm_sec;
-	return t;
-}
-
-//Prints a line in the log file with the person's name and the current time and tells the user
-void logAttendance(std::string name) {
-	Time time = getTime();
-	std::string formatted_time = formatTime(time);
-	std::ofstream log("log.txt", std::ofstream::app);
-	log<<"\r\n"<<name;
-	for (int i = name.size(); i < NAME_SPACE; i++) log<<" ";
-	log<<"="<<" "<<formatted_time;
-	log.close();
-	std::pair<std::vector<Time>, std::vector<Time> > sign_ins_outs = getSignInsOuts(name);
-	std::string sign_in_or_out = (sign_ins_outs.first.size() == sign_ins_outs.second.size()) ? "out" : "in";
-	std::cout<<"Signed "<<sign_in_or_out<<" "<<name<<" at "<<formatTimeAlt(time)<<"."<<std::endl;
 }
 
 //Gets the name that goes with a uid

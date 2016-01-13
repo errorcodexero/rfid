@@ -106,3 +106,33 @@ std::pair<std::vector<Time>, std::vector<Time> > getSignInsOuts(std::string name
 	}
 	return std::make_pair(sign_ins, sign_outs);
 }
+
+//Gets the current time and returns a Time structure filled in with the correct values
+Time getTime() {
+	time_t rawtime;
+	struct tm * ptm;
+	time (&rawtime);
+	ptm = localtime(&rawtime);
+	Time t;
+	t.year = (ptm->tm_year) + 1900;
+	t.month = (ptm->tm_mon) + 1;
+	t.day = ptm->tm_mday;
+	t.hour = (ptm->tm_hour);
+	t.minute = ptm->tm_min;
+	t.second = ptm->tm_sec;
+	return t;
+}
+
+//Prints a line in the log file with the person's name and the current time and tells the user
+void logAttendance(std::string name) {
+	Time time = getTime();
+	std::string formatted_time = formatTime(time);
+	std::ofstream log("log.txt", std::ofstream::app);
+	log<<"\r\n"<<name;
+	for (int i = name.size(); i < NAME_SPACE; i++) log<<" ";
+	log<<"="<<" "<<formatted_time;
+	log.close();
+	std::pair<std::vector<Time>, std::vector<Time> > sign_ins_outs = getSignInsOuts(name);
+	std::string sign_in_or_out = (sign_ins_outs.first.size() == sign_ins_outs.second.size()) ? "out" : "in";
+	std::cout<<"Signed "<<sign_in_or_out<<" "<<name<<" at "<<formatTimeAlt(time)<<"."<<std::endl;
+}
