@@ -1,9 +1,7 @@
- - Timed signout
  - Have a configuration file for the COM Port, file names, and other things
  - File for alternate names for people
  - Linux functionality, accessible via command line argument or config file
  - README
  - Amber color for signing out
- - Log reader
- - Auto signer-outer
  - Serial logging option for just ids read
+ - UI
