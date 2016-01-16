@@ -111,7 +111,7 @@ int main(int argc, char* argv[]) {
 			
 			if (uid.size() > 0) {
 				if (uid == "FFFFFFFF") {
-					std::cout<<"Please enter either your first and last name or \"quit\" to quit."<<std::endl;
+					std::cout<<"Please enter your first and last name or enter \"quit\" to quit."<<std::endl;
 					
 					bool timed_out = false;
 					char buffer[256] = {0};
@@ -191,7 +191,7 @@ int main(int argc, char* argv[]) {
 		CloseHandle(hCom);
 	} else {
 		while(!quitting) {
-			std::cout<<"Please enter either your first and last name or \"quit\" to quit."<<std::endl;
+			std::cout<<"Please enter your first and last name or enter \"quit\" to quit."<<std::endl;
 			std::string name;
 			getline(std::cin, name);
 			if (name != "quit") {
