@@ -64,6 +64,23 @@ Time operator+(Time t1, Time t2) {
 	return result;
 }
 
+bool operator<(Time t1, Time t2) {
+	if (t1.year < t2.year) {
+		return true;
+	} else if (t1.month < t2.month) {
+		return true;
+	} else if (t1.day < t2.day) {
+		return true;
+	} else if (t1.hour < t2.hour) {
+		return true;
+	} else if (t1.minute < t2.minute) {
+		return true;
+	} else if (t1.second < t2.second) {
+		return true;
+	}
+	return false;
+}
+
 //Determines whether a member of a Time structure is the last to have a value greater than zero
 bool isLast(Time t, int pos) {
 	int values[4] = {t.second, t.minute, t.hour, t.day};

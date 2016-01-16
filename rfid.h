@@ -27,6 +27,7 @@ struct Time {
 
 Time operator-(Time t1, Time t2);
 Time operator+(Time t1, Time t2);
+bool operator<(Time t1, Time t2);
 std::ostream& operator<<(std::ostream& os, Time t);
 Time getTime();
 void removeLineBreaks(std::string &str);
