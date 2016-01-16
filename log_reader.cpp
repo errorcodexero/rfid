@@ -37,7 +37,7 @@ int main() {
 				//Config option for hours vs extended time
 				//Make this a flag
 				//std::cout<<std::endl<<name<<" has a total time of "<<total_time<<"."<<std::endl;
-				std::cout<<std::endl<<name<<" has a total time of "<<total_time.hour<<" hour"<<((total_time.hour != 1) ? "s" : "")<<"."<<std::endl;
+				std::cout<<std::endl<<name<<" has a total time of "<<getTimeInHours(total_time)<<" hour"<<((getTimeInHours(total_time) != 1) ? "s" : "")<<"."<<std::endl;
 			} else {
 				std::cout<<std::endl<<"Invalid entry.  Either the name was entered incorrectly or no such name is stored in the system."<<std::endl;
 			}

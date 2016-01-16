@@ -67,15 +67,15 @@ Time operator+(Time t1, Time t2) {
 bool operator<(Time t1, Time t2) {
 	if (t1.year < t2.year) {
 		return true;
-	} else if (t1.month < t2.month) {
+	} else if (t1.month < t2.month && t1.year == t2.year) {
 		return true;
-	} else if (t1.day < t2.day) {
+	} else if (t1.day < t2.day && t1.month == t2.month && t1.year == t2.year) {
 		return true;
-	} else if (t1.hour < t2.hour) {
+	} else if (t1.hour < t2.hour && t1.day == t2.day && t1.month == t2.month && t1.year == t2.year) {
 		return true;
-	} else if (t1.minute < t2.minute) {
+	} else if (t1.minute < t2.minute && t1.hour == t2.hour && t1.day == t2.day && t1.month == t2.month && t1.year == t2.year) {
 		return true;
-	} else if (t1.second < t2.second) {
+	} else if (t1.second < t2.second && t1.minute == t2.minute && t1.hour == t2.hour && t1.day == t2.day && t1.month == t2.month && t1.year == t2.year) {
 		return true;
 	}
 	return false;
@@ -250,4 +250,9 @@ Time getTotalTime(std::pair<std::vector<Time>, std::vector<Time> > &sign_ins_out
 		total = total + (sign_ins_outs.second[i] - sign_ins_outs.first[i]);
 	}
 	return total;
+}
+
+//Converts from a Time to hours
+int getTimeInHours(Time t) {
+	return (int) ((t.year * 8544) + (t.month * 720) + (t.day * 24) + t.hour + (t.minute / 60) + (t.second / 3600));
 }

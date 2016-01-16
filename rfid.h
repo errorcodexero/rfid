@@ -38,5 +38,6 @@ Time parseFormattedTime(std::string time_string);
 std::pair<std::vector<Time>, std::vector<Time> > getSignInsOuts(std::string name);
 void logAttendance(std::string name);
 Time getTotalTime(std::pair<std::vector<Time>, std::vector<Time> > &sign_ins_outs);
+int getTimeInHours(Time t);
 
 #endif	
