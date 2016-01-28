@@ -10,7 +10,7 @@ int main() {
 		assert(checkName(name));
 		std::pair<std::vector<Time>, std::vector<Time> > sign_ins_outs = getSignInsOuts(name);
 		if (sign_ins_outs.first.size() != sign_ins_outs.second.size()) {
-			addLineToFile("test.txt", "MEOW", 5);
+			logAttendance(name);
 		}
 	}
 	names.close();
