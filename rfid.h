@@ -36,7 +36,8 @@ std::string formatTime(Time time);
 std::string formatTimeAlt(Time time);
 Time parseFormattedTime(std::string time_string);
 std::pair<std::vector<Time>, std::vector<Time> > getSignInsOuts(std::string name);
-void logAttendance(std::string name);
+int addLineToFile(std::string file_name, std::string str, int line_number);
+void logAttendance(std::string name, int line_number=-1);
 Time getTotalTime(std::pair<std::vector<Time>, std::vector<Time> > &sign_ins_outs);
 int getTimeInHours(Time t);
 
