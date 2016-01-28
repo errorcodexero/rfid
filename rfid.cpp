@@ -11,6 +11,15 @@ Time::Time() {
 	second = 0;
 }
 
+Time::Time(int y, int mo, int d, int h, int m, int s) {
+	year = y;
+	month = m;
+	day = d;
+	hour = h;
+	minute = m;
+	second = s;
+}
+
 //Returns the amount of whatever unit of time are in the next unit of time
 int getTimePosValue(int pos, int month = 0) {
 	int pos_value = time_pos_values[pos];
@@ -278,8 +287,7 @@ int addLineToFile(std::string file_name, std::string str, int line_number) {
 }
 
 //Prints a line in the log file with the person's name and the current time and tells the user
-void logAttendance(std::string name, int line_number) {
-	Time time = getTime();
+void logAttendance(std::string name, int line_number, Time time) {
 	std::string log_line = name;
 	for (int i = name.size(); i < NAME_SPACE; i++) log_line.append(" ");
 	log_line.append("= ");

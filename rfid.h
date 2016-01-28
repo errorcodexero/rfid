@@ -9,6 +9,7 @@
 #include <cassert>
 
 #define NAME_SPACE 24
+#define HOURS_TO_ADD 3
 
 enum check {CHECK_MONTH_DAYS};
 const int time_pos_values[5] = {60, 60, 24, CHECK_MONTH_DAYS, 12}; //Seconds in a minute, minutes in an hour, hours in a day, days in a month, months in a year
@@ -23,6 +24,7 @@ struct Time {
 	int minute;
 	int second;
 	Time();
+	Time(int y, int mo, int d, int h, int m, int s);
 };
 
 Time operator-(Time t1, Time t2);
@@ -37,7 +39,7 @@ std::string formatTimeAlt(Time time);
 Time parseFormattedTime(std::string time_string);
 std::pair<std::vector<Time>, std::vector<Time> > getSignInsOuts(std::string name);
 int addLineToFile(std::string file_name, std::string str, int line_number);
-void logAttendance(std::string name, int line_number=-1);
+void logAttendance(std::string name, int line_number=-1, Time time=getTime());
 Time getTotalTime(std::pair<std::vector<Time>, std::vector<Time> > &sign_ins_outs);
 int getTimeInHours(Time t);
 
