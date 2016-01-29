@@ -10,19 +10,25 @@ int main() {
 		assert(checkName(name));
 		std::pair<std::vector<Time>, std::vector<Time> > sign_ins_outs = getSignInsOuts(name);
 		if (sign_ins_outs.first.size() != sign_ins_outs.second.size()) {
-			Time last_time = sign_ins_outs.first.back();
+			Time to_add(0, 0, 0, HOURS_TO_ADD, 0, 0);
+			Time out_time = sign_ins_outs.first.back() + to_add;
 			std::ifstream log("log.txt");
 			int line_number = 0;
+			Time last_difference;
+			bool first = true;
 			while (!log.eof()) {
 				std::string log_line;
 				getline(log, log_line);
-				if (log_line.find(formatTime(last_time)) != std::string::npos) break;
+				Time difference = out_time - parseFormattedTime(log_line.substr(log_line.find("=") + 2));
+				std::cout<<last_difference<<"    "<<difference<<"    "<<last_difference.year<<"    "<<difference.year<<std::endl;
+				if (!first && (last_difference < difference)) break;
+				last_difference = difference;
+				first = false;
 				line_number++;
 			}
 			log.close();
-			Time to_add(0, 0, 0, HOURS_TO_ADD, 0, 0);
-			Time out_time = last_time + to_add;
-			logAttendance(name, line_number + 1, out_time);
+			std::cout<<"Line number: "<<line_number<<std::endl;
+			logAttendance(name, line_number, out_time);
 		}
 	}
 	names.close();

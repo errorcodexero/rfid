@@ -41,6 +41,12 @@ void correctTime(int &val1, int &val2, int pos, int month = 0) {
 	}
 }
 
+void correctYear(int &val) {
+	if (val < 0) {
+		val = 0;
+	}
+}
+
 Time operator-(Time t1, Time t2) {
 	Time result;
 	result.second = t1.second - t2.second;
@@ -54,6 +60,7 @@ Time operator-(Time t1, Time t2) {
 	correctTime(result.hour, result.day, 2);
 	correctTime(result.day, result.month, 3, t2.month);
 	correctTime(result.month, result.year, 4);
+	correctYear(result.year);
 	return result;
 }
 
