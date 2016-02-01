@@ -27,7 +27,6 @@ int main() {
 				line_number++;
 			}
 			log.close();
-			std::cout<<"Line number: "<<line_number<<std::endl;
 			logAttendance(name, line_number, out_time);
 		}
 	}
