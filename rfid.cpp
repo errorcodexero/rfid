@@ -229,7 +229,7 @@ Time parseFormattedTime(std::string time_string) {
 
 //Gets the sign-ins and sign-outs of the given person
 std::pair<std::vector<Time>, std::vector<Time> > getSignInsOuts(std::string name) {
-	std::ifstream log("log.txt");
+	std::ifstream log("logs/2015_offseason.txt");
 	std::vector<Time> sign_ins, sign_outs;
 	bool sign_in = true;
 	std::string line;
