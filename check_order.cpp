@@ -1,7 +1,7 @@
 #include "rfid.h"
 
 int main() {
-	std::ifstream log("logs/2015_offseason.txt");
+	std::ifstream log("log.txt");
 	int line_number = 0;
 	Time last_difference;
 	bool first = true;

@@ -1070,7 +1070,6 @@ Austin Hohenshelt       = 09:02:46 02/06/2016
 Zachary Starr           = 09:05:12 02/06/2016
 Zachary Starr           = 09:05:23 02/06/2016
 Cayleb Riggs            = 09:05:31 02/06/2016
-Andrew Kassab           = 09:05:44 02/06/2016
 Trevor Murphy           = 09:05:51 02/06/2016
 Forrest Edwards         = 09:10:43 02/06/2016
 Eric Rippey             = 09:11:51 02/06/2016
