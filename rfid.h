@@ -9,7 +9,11 @@
 #include <cassert>
 
 #define NAME_SPACE 24
+#define HOUR_SPACE 3
 #define HOURS_TO_ADD 3
+
+#define HOURS_NEEDED 100
+#define MAX_OFFSEASON_HOURS 20
 
 enum check {CHECK_MONTH_DAYS};
 const int time_pos_values[5] = {60, 60, 24, CHECK_MONTH_DAYS, 12}; //Seconds in a minute, minutes in an hour, hours in a day, days in a month, months in a year
@@ -37,10 +41,11 @@ bool checkName(std::string &name);
 std::string formatTime(Time time);
 std::string formatTimeAlt(Time time);
 Time parseFormattedTime(std::string time_string);
-std::pair<std::vector<Time>, std::vector<Time> > getSignInsOuts(std::string name);
+std::pair<std::vector<Time>, std::vector<Time> > getSignInsOuts(std::string name, std::string file="log.txt");
 int addLineToFile(std::string file_name, std::string str, int line_number);
 void logAttendance(std::string name, int line_number=-1, Time time=getTime());
 Time getTotalTime(std::pair<std::vector<Time>, std::vector<Time> > &sign_ins_outs);
 int getTimeInHours(Time t);
+int getTimeInDays(Time t);
 
 #endif	

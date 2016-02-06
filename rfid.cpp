@@ -13,7 +13,7 @@ Time::Time() {
 
 Time::Time(int y, int mo, int d, int h, int m, int s) {
 	year = y;
-	month = m;
+	month = mo;
 	day = d;
 	hour = h;
 	minute = m;
@@ -228,8 +228,8 @@ Time parseFormattedTime(std::string time_string) {
 }
 
 //Gets the sign-ins and sign-outs of the given person
-std::pair<std::vector<Time>, std::vector<Time> > getSignInsOuts(std::string name) {
-	std::ifstream log("log.txt");
+std::pair<std::vector<Time>, std::vector<Time> > getSignInsOuts(std::string name, std::string file) {
+	std::ifstream log(file);
 	std::vector<Time> sign_ins, sign_outs;
 	bool sign_in = true;
 	std::string line;
@@ -316,5 +316,10 @@ Time getTotalTime(std::pair<std::vector<Time>, std::vector<Time> > &sign_ins_out
 
 //Converts from a Time to hours
 int getTimeInHours(Time t) {
-	return (int) ((t.year * 8544) + (t.month * 720) + (t.day * 24) + t.hour + (t.minute / 60) + (t.second / 3600));
+	return (int) ((t.year * 8760) + (t.month * 720) + (t.day * 24) + t.hour + (t.minute / 60) + (t.second / 3600));
+}
+
+//Converts from a Time to days
+int getTimeInDays(Time t) {
+	return (int) ((t.year * 365) + (t.month * 30) + t.day + (t.hour / 24) + (t.minute / 1440) + (t.second / 86400));
 }
