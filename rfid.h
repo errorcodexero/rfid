@@ -12,8 +12,8 @@
 #define HOUR_SPACE 3
 #define HOURS_TO_ADD 3
 
-#define HOURS_NEEDED 100
-#define MAX_OFFSEASON_HOURS 20
+#define HOURS_NEEDED 90
+#define MAX_OFFSEASON_HOURS 30
 
 enum check {CHECK_MONTH_DAYS};
 const int time_pos_values[5] = {60, 60, 24, CHECK_MONTH_DAYS, 12}; //Seconds in a minute, minutes in an hour, hours in a day, days in a month, months in a year

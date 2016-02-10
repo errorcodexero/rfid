@@ -1,4 +1,4 @@
-all: logger log_reader autologger rankings check_order on_track
+all: logger log_reader autologger rankings check_order on_track reformat_log
 
 logger_64: rfid.cpp logger.cpp
 	x86_64-w64-mingw32-g++ rfid.cpp logger.cpp -Wall -static -static-libgcc -static-libstdc++ -std=c++11 -o "logger.exe"
@@ -21,6 +21,9 @@ check_order: rfid.cpp check_order.cpp
 on_track: rfid.cpp on_track.cpp
 	g++ rfid.cpp on_track.cpp -Wall -std=c++11 -o "on_track.exe"
 
+reformat_log: rfid.cpp reformat_log.cpp
+	g++ rfid.cpp reformat_log.cpp -Wall -std=c++11 -o "reformat_log.exe"
+
 .PHONY: clean
 clean:
-	rm logger.exe; rm log_reader.exe; rm autologger.exe; rm rankings.exe; rm check_order.exe; rm on_track.exe;
+	rm logger.exe; rm log_reader.exe; rm autologger.exe; rm rankings.exe; rm check_order.exe; rm on_track.exe; rm reformat_log.exe;
