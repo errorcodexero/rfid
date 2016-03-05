@@ -17,6 +17,5 @@ int main() {
 	}
 	log.close();
 	std::cout<<"At line number "<<line_number<<std::endl;
-	std::cout<<"Difference: "<<difference<<std::endl;
 	return 0;
 }

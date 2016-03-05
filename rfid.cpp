@@ -21,22 +21,24 @@ Time::Time(int y, int mo, int d, int h, int m, int s) {
 }
 
 //Returns the amount of whatever unit of time are in the next unit of time
-int getTimePosValue(int pos, int month = 0) {
+int getTimePosValue(int pos, int month = 1, int year = 0) {
 	int pos_value = time_pos_values[pos];
 	if (pos_value == CHECK_MONTH_DAYS) {
 		int array_month = month - 1;
-		return month_days[array_month];
+		int days = month_days[array_month];
+		return ((month==2) && (year%4==0)) ? (days + 1) : days;
 	}
 	return pos_value;
 }
 
 //Corrects for going over into the next of a larger unit of time by making adjustments to other members of the Time structure
-void correctTime(int &val1, int &val2, int pos, int month = 0) {
+void correctTime(int &val1, int &val2, int pos, int month = 1, int year = 0) {
+	int pos_value = (pos == 3) ? getTimePosValue(3, month, year) : getTimePosValue(pos); 
 	if (val1 < 0) {
-		val1 = ((pos == 3) ? getTimePosValue(3, month) : getTimePosValue(pos)) + val1;
+		val1 = pos_value + val1;
 		val2 -= 1;
-	} else if (val1 >= ((pos == 3) ? getTimePosValue(3, 4) : getTimePosValue(pos))) { //Always uses a value of 30 for month length
-		val1 = val1 - ((pos == 3) ? getTimePosValue(3, 4) : getTimePosValue(pos));   //Here too
+	} else if (val1 >= pos_value) {
+		val1 = val1 - pos_value;
 		val2 += 1;
 	}
 }
@@ -58,7 +60,7 @@ Time operator-(Time t1, Time t2) {
 	correctTime(result.second, result.minute, 0);
 	correctTime(result.minute, result.hour, 1);
 	correctTime(result.hour, result.day, 2);
-	correctTime(result.day, result.month, 3, t2.month);
+	correctTime(result.day, result.month, 3, t2.month, t2.year);
 	correctTime(result.month, result.year, 4);
 	correctYear(result.year);
 	return result;
