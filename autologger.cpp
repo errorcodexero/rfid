@@ -20,7 +20,6 @@ int main() {
 				std::string log_line;
 				getline(log, log_line);
 				Time difference = out_time - parseFormattedTime(log_line.substr(log_line.find("=") + 2));
-				//std::cout<<last_difference<<"    "<<difference<<"    "<<last_difference.year<<"    "<<difference.year<<std::endl;
 				if (!first && (last_difference < difference)) break;
 				last_difference = difference;
 				first = false;

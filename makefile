@@ -23,7 +23,10 @@ on_track: rfid.cpp on_track.cpp
 
 reformat_log: rfid.cpp reformat_log.cpp
 	g++ rfid.cpp reformat_log.cpp -Wall -std=c++11 -o "reformat_log.exe"
+	
+check_and_fix: rfid.cpp check_and_fix.cpp
+	g++ rfid.cpp check_and_fix.cpp -Wall -std=c++11 -o "check_and_fix.exe"
 
 .PHONY: clean
 clean:
-	rm logger.exe; rm log_reader.exe; rm autologger.exe; rm rankings.exe; rm check_order.exe; rm on_track.exe; rm reformat_log.exe;
+	rm logger.exe; rm log_reader.exe; rm autologger.exe; rm rankings.exe; rm check_order.exe; rm on_track.exe; rm reformat_log.exe; rm check_and_fix.exe;
