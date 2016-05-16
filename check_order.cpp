@@ -1,7 +1,13 @@
 #include "rfid.h"
 
-int main() {
-	std::ifstream log("log.txt");
+int main(int arc, char** argv) {
+	std::string filename = "log.txt";
+	if (arc > 1) filename = argv[1];
+	std::ifstream log(filename);
+	if (!log.good()) {
+		std::cout<<"Error opening log file."<<std::endl;
+		return 1;
+	}
 	int line_number = 0;
 	Time last_difference;
 	Time difference;
