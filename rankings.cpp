@@ -1,17 +1,5 @@
 #include "rfid.h"
 
-//Sort the times and names by the time
-void sortSignInsOuts(std::pair<std::vector<Time>, std::vector<std::string> > &rankings) {
-	for (unsigned int i = 0; i < (rankings.first.size() - 1); i++) {
-		for (unsigned int j = (i + 1); j < rankings.first.size(); j++) {
-			if (rankings.first[i] < rankings.first[j]) {
-				std::swap(rankings.first[i], rankings.first[j]);
-				std::swap(rankings.second[i], rankings.second[j]);
-			}
-		}
-	}
-}
-
 int main() {
 	std::cout<<"Time Rankings: "<<std::endl;
 	std::ifstream names("ids_and_names.txt");

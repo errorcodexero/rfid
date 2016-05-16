@@ -307,6 +307,29 @@ void logAttendance(std::string name, int line_number, Time time) {
 	std::cout<<"Signed "<<sign_in_or_out<<" "<<name<<" at "<<formatTimeAlt(time)<<"."<<std::endl;
 }
 
+void logAttendance(std::string name, Time time, std::string file_name) {
+	std::string log_line = name;
+	for (int i = name.size(); i < NAME_SPACE; i++) log_line.append(" ");
+	log_line.append("= ");
+	log_line.append(formatTime(time));
+	addLineToFile(file_name, log_line);
+	std::pair<std::vector<Time>, std::vector<Time> > sign_ins_outs = getSignInsOuts(name, file_name);
+	std::string sign_in_or_out = (sign_ins_outs.first.size() == sign_ins_outs.second.size()) ? "out" : "in";
+	std::cout<<"Signed "<<sign_in_or_out<<" "<<name<<" at "<<formatTimeAlt(time)<<"."<<std::endl;
+}
+
+//Sort the times and names by the time
+void sortSignInsOuts(std::pair<std::vector<Time>, std::vector<std::string> > &rankings) {
+	for (unsigned int i = 0; i < (rankings.first.size() - 1); i++) {
+		for (unsigned int j = (i + 1); j < rankings.first.size(); j++) {
+			if (rankings.first[i] < rankings.first[j]) {
+				std::swap(rankings.first[i], rankings.first[j]);
+				std::swap(rankings.second[i], rankings.second[j]);
+			}
+		}
+	}
+}
+
 //Computes the total amount of time a person has been signed in
 Time getTotalTime(std::pair<std::vector<Time>, std::vector<Time> > &sign_ins_outs) {
 	Time total;
