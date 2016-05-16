@@ -5,4 +5,5 @@
  - Amber color for signing out
  - Serial logging option for just ids read
  - UI
- - add file choosing to some programs
+ - Add file choosing to some programs
+ - End season log at whatever date, split off into new offseason log
