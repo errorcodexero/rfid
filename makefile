@@ -30,6 +30,9 @@ check_and_fix: rfid.cpp check_and_fix.cpp
 log_shop_times: rfid.cpp log_shop_times.cpp
 	g++ rfid.cpp log_shop_times.cpp -Wall -std=c++11 -o "log_shop_times.exe"
 	
+signed_in: rfid.cpp signed_in.cpp
+	g++ rfid.cpp signed_in.cpp -Wall -std=c++11 -o "signed_in.exe"
+
 .PHONY: clean
 clean:
-	rm logger.exe; rm log_reader.exe; rm autologger.exe; rm rankings.exe; rm check_order.exe; rm on_track.exe; rm reformat_log.exe; rm check_and_fix.exe; rm "log_shop_times.exe"
+	rm logger.exe; rm log_reader.exe; rm autologger.exe; rm rankings.exe; rm check_order.exe; rm on_track.exe; rm reformat_log.exe; rm check_and_fix.exe; rm log_shop_times.exe; rm signed_in.exe;
