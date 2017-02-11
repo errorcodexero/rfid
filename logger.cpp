@@ -1,7 +1,10 @@
-#include <stdio.h>
+#ifndef LINUX
 #include <tchar.h>
 #include <windows.h>
+#endif
+
 #include <stdlib.h>
+#include <stdio.h>
 #include <iostream>
 #include <cstddef>
 #include <ctime>
@@ -19,10 +22,12 @@ struct data {
 	std::size_t size;
 };
 
+#ifndef LINUX
 DWORD WINAPI getInput(LPVOID arg) {
 	data *buf = (data*)arg;
 	return !std::cin.getline(buf->buffer, buf->size);
 }
+#endif
 
 //Gets the name that goes with a uid
 std::string getName(std::string uid) {
@@ -60,6 +65,7 @@ int main(int argc, char* argv[]) {
 	
 	bool quitting = false;
 	
+	#ifndef LINUX
 	std::string no_arduino_str = "-noarduino";
 	bool use_arduino = [&]() {
 		for (int i = 0; i < argc; i++) {
@@ -190,6 +196,7 @@ int main(int argc, char* argv[]) {
 		}
 		CloseHandle(hCom);
 	} else {
+	#endif
 		while(!quitting) {
 			std::cout<<"Please enter your first and last name or enter \"quit\" to quit."<<std::endl;
 			std::string name;
@@ -205,7 +212,9 @@ int main(int argc, char* argv[]) {
 				quitting = true;
 			}
 		}
+	#ifndef LINUX
 	}
+	#endif
 
 	return 0;
 }

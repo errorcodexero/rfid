@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Matthew Macovsky        = 19:40:08 01/05/2017
 Matthew Macovsky        = 19:40:33 01/05/2017
 Matthew Macovsky        = 18:36:58 01/09/2017
